@@ -10,40 +10,47 @@
     function ImprimeCartas ($array){
 
         foreach($array as $clave=>$valor){
+            
             echo "  
             <div class=bordecarta>
-                <div class=fondocarta>
+                <div class=fondocarta style=background-image:url({$valor-> fondo})>
+                     
                     <article class=articulocarta>
 
                         <header class=encabezadocarta>
                             <h1> {$valor-> nombre} </h1>
                             <div>
-                                {$valor-> mana1}
-                                {$valor-> cantmana1}
-                                {$valor-> mana2}
-                                {$valor-> cantmana2}
-                                {$valor-> cantmanainc}        
+                                <img class=imgmana src={$valor-> cantmanainc} >
+                                <img class=imgmana src={$valor-> mana1} >
+                                <img class=imgmana src={$valor-> cantmana1} >
+                                <img class=imgmana src={$valor-> mana2} >
+                                <img class=imgmana src={$valor-> cantmana2} >     
                             </div>
                         </header>
-                        <section class=imagen>
-                                {$valor-> fondo}
-                                {$valor-> shiny}
-                                {$valor-> img}
-                                {$valor-> imgtierra}
+
+                        <section class=seccionimagen>
+                            <img class=imgcarta src={$valor-> img}>
+                            
+                            {$valor-> shiny}
+                            {$valor-> imgtierra}
                         </section>
+
                         <section class=secciontiposubtipocarta>
                             <ol>
                                 <li class=itemtipo>
-                                    {$valor-> tipo}
+                                    {$valor-> tipo} 
                                 </li>
+                                
                                 <li class=itemsubtipo>
-                                    {$valor-> tipoespecifico}
+                                   - {$valor-> tipoespecifico}
                                 </li>
                                 <li class=itemexpansion>
-                                    {$valor-> expansion}
+                                    <img class= src={$valor-> expansion}>
+                                    
                                 </li>
                             </ol>
                         </section>
+                        
                         <section class=secciondescripcioncarta>
                             <ol>
                                 <li class=itemhabilidad>
