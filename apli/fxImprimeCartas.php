@@ -11,69 +11,77 @@
 
         foreach($array as $clave=>$valor){
             echo "  
-            <article class=articulocarta>
+            <div class=bordecarta>
+                <div class=fondocarta>
+                    <article class=articulocarta>
 
-                <header class=encabezadocarta>
-                    <h1> $valor-> nombre </h1>
-                    <div>
-                    $valor-> mana1
-                    $valor-> cantmana1
-                    $valor-> mana2
-                    $valor-> cantmana2
-                    $valor-> cantmanainc        
-                    </div>
-                </header>
-                <section class=imagen>
-                    $valor-> fondo
-                    $valor-> shiny
-                    $valor-> img
-                    $valor-> imgtierra
-                </section>
-                <section class=secciontiposubtipocarta>
-                    <ol>
-                        <li class=itemtipo>
-                            $valor-> tipo
-                        </li>
-                        <li class=itemsubtipo>
-                            $valor-> tipoespecifico
-                        </li>
-                        <li class=itemexpansion>
-                            $valor-> expansion
-                        </li>
-                    </ol>
-                </section>
-                <section class=secciondescripcioncarta>
-                    <ol>
-                        <li class=itemhabilidad>
-                            $valor-> habilidad
-                        </li>
-                        <li class=itemtextambiente>
-                            $valor-> textambiente
-                        </li>
-                        <li class=itemfuerza>
-                            $valor-> fuerza
-                        </li>
-                        <li class=itemresistencia>
-                            $valor-> resistencia
-                        </li>
-                    </ol>
-                </section>
-                <footer class=piecarta>
-                    <ol>
-                        <li class=itemhabilidad>
-                            $valor-> artista
-                        </li>
-                        <li class=item>
-                            $valor-> numcoleccion
-                        </li>
-                    </ol>
-                </footer>
+                        <header class=encabezadocarta>
+                            <h1> {$valor-> nombre} </h1>
+                            <div>
+                                {$valor-> mana1}
+                                {$valor-> cantmana1}
+                                {$valor-> mana2}
+                                {$valor-> cantmana2}
+                                {$valor-> cantmanainc}        
+                            </div>
+                        </header>
+                        <section class=imagen>
+                                {$valor-> fondo}
+                                {$valor-> shiny}
+                                {$valor-> img}
+                                {$valor-> imgtierra}
+                        </section>
+                        <section class=secciontiposubtipocarta>
+                            <ol>
+                                <li class=itemtipo>
+                                    {$valor-> tipo}
+                                </li>
+                                <li class=itemsubtipo>
+                                    {$valor-> tipoespecifico}
+                                </li>
+                                <li class=itemexpansion>
+                                    {$valor-> expansion}
+                                </li>
+                            </ol>
+                        </section>
+                        <section class=secciondescripcioncarta>
+                            <ol>
+                                <li class=itemhabilidad>
+                                    {$valor-> habilidad}
+                                </li>
+                                <li class=itemtextambiente>
+                                    {$valor-> textambiente}
+                                </li>
+                                <li class=itemfuerza>
+                                    {$valor-> fuerza}
+                                </li>
+                                <li class=itemresistencia>
+                                    {$valor-> resistencia}
+                                </li>
+                            </ol>
+                        </section>
+                        <footer class=piecarta>
+                            <ol>
+                                <li class=itemhabilidad>
+                                    {$valor-> artista}
+                                </li>
+                                <li class=item>
+                                    {$valor-> numcoleccion}
+                                </li>
+                            </ol>
+                        </footer>
 
-            </article>
+                    </article>
+                </div>
+            </div>
             ";
         }
     }
 
+    // foreach($cartas as $clave=>$valor){
+    //     echo "{$valor-> nombre}";
+    // }
+        
     // $valor-> nombre;
     // $valor-> fondo;
     // $valor-> shiny;

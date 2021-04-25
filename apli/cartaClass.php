@@ -44,14 +44,14 @@ class Carta {
 
     public function __construct(
         $idcarta, $nombre, $fondo, $shiny, $mana1, $cantmana1, $mana2, $cantmana2, $cantmanainc,
-        $img, $idtipo, $tipoespecifico, $expansion, $habilidad, $imgtierra, $textambiente, $fuerza,
+        $img, $tipo, $tipoespecifico, $expansion, $habilidad, $imgtierra, $textambiente, $fuerza,
         $resistencia, $artista, $numcoleccion)
     {
         $this-> idcarta = $idcarta;  $this-> nombre = $nombre; $this-> fondo = $fondo;
         $this-> shiny = $shiny;
         $this-> mana1 = $mana1; $this-> cantmana1 = $cantmana1; $this-> mana2 = $mana2; 
         $this-> cantmana2 = $cantmana2; $this-> cantmanainc = $cantmanainc; $this-> img = $img;
-        $this-> idtipo = $idtipo; $this-> tipoespecifico = $tipoespecifico;
+        $this-> tipo = $tipo; $this-> tipoespecifico = $tipoespecifico;
         $this-> expansion = $expansion; $this-> habilidad = $habilidad; $this-> imgtierra = $imgtierra;
         $this-> textambiente = $textambiente; $this-> fuerza = $fuerza; $this-> resistencia = $resistencia;
         $this-> artista = $artista; $this-> numcoleccion = $numcoleccion;
@@ -61,7 +61,7 @@ class Carta {
         shiny: {$this-> shiny}<br> colormana1: {$this-> mana1}<br> cantidad: {$this-> cantmana1}<br> 
         colormana2: {$this-> mana2}<br> cantidad: {$this-> cantmana2}<br>
         manainc: {$this-> cantmanainc}<br> imagen: {$this-> img}<br> 
-        tipo: {$this-> idtipo}<br> tipo especifico: {$this-> tipoespecifico}<br> expansión: {$this-> expansion}<br>
+        tipo: {$this-> tipo}<br> tipo especifico: {$this-> tipoespecifico}<br> expansión: {$this-> expansion}<br>
         habilidad: {$this-> habilidad}<br> imagen tierra: {$this-> imgtierra}<br> texto ambiente: {$this-> textambiente}<br>
         fuerza: {$this-> fuerza}<br> resistencia: {$this-> resistencia}<br>
         artista: {$this-> artista}<br> numero coleccion: {$this-> numcoleccion}<br><br>";

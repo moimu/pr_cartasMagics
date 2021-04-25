@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Galeria Magic </title>
     <link rel="icon" href="#">
-    <link rel="stylesheet" type="test/css" href="#">
+    <link rel="stylesheet" type="text/css" href="./css/styles1.css">
 </head>
 <body class="body" >
 
-    <header class="header"> 
+    <header class="indexheader"> 
             <div class="logoymenu">
 
                 <a href="#" class="logo"> MI LOGO </a>
@@ -24,7 +24,7 @@
 
             </div>
     </header>
-    <main class="main">
+    <main class="indexmain">
 
         <?php
             include('fxImprimeCartas.php');
@@ -33,7 +33,7 @@
         ?>
 
     </main>
-    <footer class="footer">
+    <footer class="indexfooter">
         <nav>
             <section>
                 <h1> Articulos de interés </h1>

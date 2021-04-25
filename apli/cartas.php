@@ -39,9 +39,9 @@ while($sentencia->fetch()){
     $cantmana2, $cantmanainc, $img ,$tipo, $tipoespecifico , $expansion ,$habilidad,
     $imgtierra, $textambiente, $fuerza ,$resistencia, $artista , $numcoleccion);
 }
-foreach($cartas as $clave=>$valor){
-    echo $valor;
-}
-
+// var_dump($cartas);
+// foreach($cartas as $clave=>$valor){
+//     $valor->tipo;
+// }
 $sentencia->close();    
 $db->close();
