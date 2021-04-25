@@ -4,47 +4,44 @@ include('conexionBd.php');
 include('cartaClass.php');
 
 
-$sentencia = $db->prepare("SELECT car.`idcarta`,car.`nombre`,car.`fondo`,car.`mana1`,car.`cantmana1`,car.`mana2`,car.`cantmana2`,
-car.`cantmanainc`,car.`img`,tip.`descripcion`,car.`tipoespecifico`,car.`expansion`,car.`habilidad`,car.`imgtierra`,
-car.`textambiente`,car.`fuerza`,car.`resistencia`,car.`artista`,car.`numcoleccion`
-FROM `cartas` car INNER JOIN `tipo` tip ON car.`idtipo`= tip.`idtipo` "); 
+$sentencia = $db->prepare("SELECT ca.`idcarta`, ca.`nombre`, fo.`direccion`, shi.`direccion`
+,ma1.`direccion` ,ca.`cantmana1`,ma2.`direccion` ,ca.`cantmana2`,mainc.`direccion`, ca.`img`
+, tip.`descripcion`, ca.`tipoespecifico`, ex.`direccion`, ca.`habilidad`, imgt.`direccion`
+, ca.`textambiente`, ca.`fuerza`, ca.`resistencia`, ca.`artista`, ca.`numcoleccion` 
+FROM `cartas` ca
+INNER JOIN `fondos` fo
+ON ca.`idfondo`= fo.`idfondo`
+INNER JOIN `fondos` shi
+ON ca.`idshiny`= shi.`idfondo`
+INNER JOIN `manas` ma1
+ON ca.`idmana1`= ma1.`idmana`
+INNER JOIN `manas` ma2
+ON ca.`idmana2`= ma2.`idmana`
+INNER JOIN `manas` mainc
+ON ca.`idmanaincoloro`= mainc.`idmana`
+INNER JOIN `tipos` tip     
+ON ca.`idtipo`= tip.`idtipo`
+INNER JOIN `expansiones` ex
+ON ca.`idexpansion`= ex.`idexpansion`
+INNER JOIN `imgtierras` imgt
+ON ca.`idimgtierra`= imgt.`idimgtierra`
+ORDER BY `idcarta` "); 
 
 $sentencia -> execute();
 
 $sentencia -> bind_result(
-    $idcarta, $nombre ,$fondo, $mana1 , $cantmana1 ,$mana2,  $cantmana2,
+    $idcarta, $nombre ,$fondo, $shiny, $mana1 , $cantmana1 ,$mana2,  $cantmana2,
     $cantmanainc, $img ,$tipo, $tipoespecifico , $expansion ,$habilidad,  $imgtierra,
     $textambiente, $fuerza ,$resistencia, $artista , $numcoleccion
 );
-
-$cont=0;
-$objetos=[];
 while($sentencia->fetch()){
-    
-
-    $nombre = new Carta($idcarta, $nombre ,$fondo, $mana1 , $cantmana1 ,$mana2,  $cantmana2,
-    $cantmanainc, $img ,$tipo, $tipoespecifico , $expansion ,$habilidad,  $imgtierra,
-    $textambiente, $fuerza ,$resistencia, $artista , $numcoleccion);
-
-    $objetos[$cont] = $nombre;
-    
-    echo "$nombre";
-    $cont++;
-    // echo  "$idcarta, $nombre ,$fondo, $mana1 , $cantmana1 ,$mana2,  $cantmana2,
-    // $cantmanainc, $img ,$idtipo, $tipoespecifico , $expansion ,$habilidad,  $imgtierra,
-    // $textambiente, $fuerza ,$resistencia, $artista , $numcoleccion";
-
-    echo "<br>";;
+    $cartas[] = new Carta($idcarta, $nombre ,$fondo, $shiny, $mana1 , $cantmana1 ,$mana2,
+    $cantmana2, $cantmanainc, $img ,$tipo, $tipoespecifico , $expansion ,$habilidad,
+    $imgtierra, $textambiente, $fuerza ,$resistencia, $artista , $numcoleccion);
 }
-
-// Aqui el nombre de la carta ya no es objeto!!!!!!!!
-// foreach($objetos as $clave=>$valor){
-//     echo $valor;
-// }
-
-
+foreach($cartas as $clave=>$valor){
+    echo $valor;
+}
 
 $sentencia->close();    
 $db->close();
-
-

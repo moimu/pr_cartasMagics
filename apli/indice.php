@@ -26,39 +26,11 @@
     </header>
     <main class="main">
 
-        <article class="articulocarta">
+        <?php
+            include('fxImprimeCartas.php');
 
-            <header class="encabezadocarta">
-                <h1>  </h1>
-            </header>
-            <section class="secciontiposubtipocarta">
-                <ol>
-                    <li class="itemtipo">
-                    </li>
-                    <li class="itemsubtipo">
-                    </li>
-                </ol>
-            </section>
-            <section class="secciondescripcioncarta">
-                <ol>
-                    <li class="itemhabilidad">
-                    </li>
-                    <li class="item">
-                    </li>
-                    <li class="">
-                    </li>
-                </ol>
-            </section>
-            <footer class="piecarta">
-                <ol>
-                    <li class="itemhabilidad">
-                    </li>
-                    <li class="item">
-                    </li>
-                </ol>
-            </footer>
-
-        </article>
+            ImprimeCartas($cartas);
+        ?>
 
     </main>
     <footer class="footer">
