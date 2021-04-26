@@ -5,6 +5,8 @@
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline; 
+    font-weight: 600;
+    list-style:none;
 }
 /* maquetación index */
 body{
@@ -35,7 +37,7 @@ body{
 .bordecarta{
     background-color: black;
     border-radius: 4%;
-    width:220px;
+    width:240px;
     height:350px;
     margin-bottom: 20px;
 }
@@ -43,12 +45,12 @@ body{
     display: flex;
     justify-content: center;
 
-    width: 200px;
+    width: 220px;
     height:330px;
     margin: 10px 10px 10px 10px;
 }
 .articulocarta{
-    width: 190px;
+    width: 210px;
     height:320px;
     margin: 5px 5px 5px 5px;
     
@@ -71,33 +73,60 @@ body{
     height:17px;
 }
 .seccionimagen{
-    width: 190px;
+    /* width: 190px;
     height: 110px;
-    left:0;
+    left:0; */
+    display:flex;
     border: 1px solid black;
 }
 .imgcarta{
-    width: 190px;
-    height: 110px;  
+    width: 210px;
+    height: 112px;  
 }
+
+
 .secciontiposubtipocarta{
     border: 1px solid black;
     border-radius:20%;
     padding:5px;
     font-size: 0.7rem;
+
+    display:flex;
+    justify-content: space-between;
 }
 .secciontiposubtipocarta>ol>li{
     display: inline-block;
 }
 .imgexpansion{
-    width: 20px;
-    height:20px;
+    width: 15px;
+    height:15px;
 }
+
 .secciondescripcioncarta{
+    width: 210px;
+    height: 110px;  
     border: 1px solid black;
     font-size: 0.6rem;
+}   
+  
+
+.seccionfuerzaresistencia{
+    width: 30px;
+    border: 1px solid black;
+    font-size: 0.6rem;
+
+}
+.seccionfuerzaresistencia>ol>li{
+    display: inline-block;
+    margin:2px;
 } 
+
+
 .piecarta{
     border: 1px solid black;
     font-size: 0.5rem;
+} 
+.piecarta>ol>li{
+    display: inline-block;
+    margin:2px;
 } 

@@ -19,12 +19,23 @@
 
                         <header class=encabezadocarta>
                             <h1> {$valor-> nombre} </h1>
-                            <div>
-                                <img class=imgmana src={$valor-> cantmanainc} >
-                                <img class=imgmana src={$valor-> mana1} >
-                                <img class=imgmana src={$valor-> cantmana1} >
-                                <img class=imgmana src={$valor-> mana2} >
-                                <img class=imgmana src={$valor-> cantmana2} >     
+                            <div>";
+                            if($valor-> cantmanainc != 1){
+                                echo "<img class=imgmana src={$valor-> cantmanainc}>";
+                            }
+                            if($valor-> mana1 != 1){
+                                echo "<img class=imgmana src={$valor-> mana1}>";
+                            }
+                            if($valor-> cantmana1 != 1){
+                                echo "<img class=imgmana src={$valor-> cantmana1}>";
+                            }
+                            if($valor-> mana2 != 1){
+                                echo "<img class=imgmana src={$valor-> mana2}>";
+                            }
+                            if($valor-> cantmana2 != 1){
+                                echo "<img class=imgmana src={$valor-> cantmana2}>";
+                            }  
+                            echo "             
                             </div>
                         </header>
 
@@ -36,19 +47,18 @@
                         </section>
 
                         <section class=secciontiposubtipocarta>
+
                             <ol>
                                 <li class=itemtipo>
                                     {$valor-> tipo} 
                                 </li>
-                                
+                                -
                                 <li class=itemsubtipo>
-                                   - {$valor-> tipoespecifico}
-                                </li>
-                                <li class=itemexpansion>
-                                    <img class= src={$valor-> expansion}>
-                                    
+                                    {$valor-> tipoespecifico}
                                 </li>
                             </ol>
+                            <img class=imgexpansion src={$valor-> expansion}>
+
                         </section>
                         
                         <section class=secciondescripcioncarta>
@@ -59,21 +69,28 @@
                                 <li class=itemtextambiente>
                                     {$valor-> textambiente}
                                 </li>
+                            </ol>
+                        </section>
+                        
+                        <section class=seccionfuerzaresistencia>
+                            <ol>
                                 <li class=itemfuerza>
                                     {$valor-> fuerza}
                                 </li>
+                                /
                                 <li class=itemresistencia>
                                     {$valor-> resistencia}
                                 </li>
                             </ol>
                         </section>
+
                         <footer class=piecarta>
                             <ol>
                                 <li class=itemhabilidad>
-                                    {$valor-> artista}
+                                    {$valor-> artista}   
                                 </li>
-                                <li class=item>
-                                    {$valor-> numcoleccion}
+                                <li class=itemnumcoleccion>
+                                    <p>numero:{$valor-> numcoleccion}</p>
                                 </li>
                             </ol>
                         </footer>
