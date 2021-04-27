@@ -52,6 +52,7 @@ CREATE TABLE `cartas`(
     `resistencia` TINYINT,
     `artista` VARCHAR(50),
     `numcoleccion` SMALLINT,
+    `colorbase` VARCHAR(30),
     PRIMARY KEY (`idcarta`),
     FOREIGN KEY (`idfondo`) REFERENCES `fondos` (`idfondo`),
     FOREIGN KEY (`idshiny`) REFERENCES `fondos` (`idfondo`),

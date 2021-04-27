@@ -41,11 +41,12 @@ class Carta {
     public int $resistencia;
     public string $artista;
     public int $numcoleccion;
+    public string $colorbase;
 
     public function __construct(
         $idcarta, $nombre, $fondo, $shiny, $mana1, $cantmana1, $mana2, $cantmana2, $cantmanainc,
         $img, $tipo, $tipoespecifico, $expansion, $habilidad, $imgtierra, $textambiente, $fuerza,
-        $resistencia, $artista, $numcoleccion)
+        $resistencia, $artista, $numcoleccion, $colorbase)
     {
         $this-> idcarta = $idcarta;  $this-> nombre = $nombre; $this-> fondo = $fondo;
         $this-> shiny = $shiny;
@@ -54,7 +55,7 @@ class Carta {
         $this-> tipo = $tipo; $this-> tipoespecifico = $tipoespecifico;
         $this-> expansion = $expansion; $this-> habilidad = $habilidad; $this-> imgtierra = $imgtierra;
         $this-> textambiente = $textambiente; $this-> fuerza = $fuerza; $this-> resistencia = $resistencia;
-        $this-> artista = $artista; $this-> numcoleccion = $numcoleccion;
+        $this-> artista = $artista; $this-> numcoleccion = $numcoleccion; $this-> colorbase = $colorbase;
     }
     public function __toString(){
         return "id:   {$this-> idcarta}<br> nombre:   {$this-> nombre}<br> fondo:   {$this-> fondo}<br>
@@ -64,6 +65,6 @@ class Carta {
         tipo: {$this-> tipo}<br> tipo especifico: {$this-> tipoespecifico}<br> expansión: {$this-> expansion}<br>
         habilidad: {$this-> habilidad}<br> imagen tierra: {$this-> imgtierra}<br> texto ambiente: {$this-> textambiente}<br>
         fuerza: {$this-> fuerza}<br> resistencia: {$this-> resistencia}<br>
-        artista: {$this-> artista}<br> numero coleccion: {$this-> numcoleccion}<br><br>";
+        artista: {$this-> artista}<br> numero coleccion: {$this-> numcoleccion}<br> colorbase: {$this-> colorbase}<br><br>";
     }
 }
