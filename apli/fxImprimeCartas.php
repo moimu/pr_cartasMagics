@@ -8,10 +8,10 @@
      * @param "$array" <contiene instanciados todos los objetos, con los datos de todas las cartas en BD>
      */
     function ImprimeCartas ($array){
-        
+        // border: 4px ridge {$valor->colorbase}
         
         foreach($array as $clave=>$valor){
-            
+               
             echo "  
             <div class=bordecarta>
                 <div class=fondocarta style=background-image:url({$valor-> fondo})>
@@ -45,7 +45,7 @@
                             {$valor-> imgtierra}
                         </section>
 
-                        <section class=secciontiposubtipocarta style=background-color:{$valor->colorbase}>
+                        <section class=secciontiposubtipocarta style=background-color:{$valor->colorbase} >
 
                             <ol>
                                 <li class=itemtipo>
@@ -71,19 +71,20 @@
                             </ol>
                         </section>
                         
-                        <section class=seccionfuerzaresistencia style=background-color:{$valor->colorbase}>
-                            <ol>
-                                <li class=itemfuerza>
-                                    {$valor-> fuerza}
-                                </li>
-                                /
-                                <li class=itemresistencia>
-                                    {$valor-> resistencia}
-                                </li>
-                            </ol>
-                        </section>
-
                         <footer class=piecarta>
+                        
+                            <section class=seccionfuerzaresistencia style=background-color:{$valor->colorbase} >
+                                <ol>
+                                    <li class=itemfuerza>
+                                        {$valor-> fuerza}
+                                    </li>
+                                    /
+                                    <li class=itemresistencia>
+                                        {$valor-> resistencia}
+                                    </li>
+                                </ol>
+                            </section>
+
                             <ol>
                                 <li class=itemhabilidad>
                                     {$valor-> artista}   
@@ -92,6 +93,7 @@
                                     <p>numero:{$valor-> numcoleccion}</p>
                                 </li>
                             </ol>
+
                         </footer>
 
                     </article>

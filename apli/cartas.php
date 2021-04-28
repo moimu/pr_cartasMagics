@@ -42,7 +42,7 @@ while($sentencia->fetch()){
 
 // var_dump($cartas);
 // foreach($cartas as $clave=>$valor){
-//     $valor->tipo;
+//     $valor->colorbase;
 // }
 
 $sentencia->close();    

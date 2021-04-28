@@ -50,46 +50,50 @@ body{
     margin: 10px 10px 10px 10px;
 }
 .articulocarta{
-    width: 210px;
+    width: 220px;
     height:320px;
     margin: 5px 5px 5px 5px;
-    
-    /* background-color: rgb(209, 96, 96); */
-    
-    /* border-radius: 1%; */
+
 }
 .encabezadocarta{
-    border: 1px solid black;
-    border-radius:20%;
+    border: 3px ridge #808080;
+
+    border-radius:16px/40px;
     padding:5px;
     font-size: 0.8rem;
+    width: 202px;
+    height: 11px;
 
     display:flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 .imgmana{
-    width: 17px;
-    height:17px;
+    width: 11px;
+    height:11px;
 }
 .seccionimagen{
-    /* width: 190px;
-    height: 110px;
-    left:0; */
-    display:flex;
-    border: 1px solid black;
+    border: 3px ridge #808080;
+    
+    box-sizing: border-box;
+    width: 208px;
+    height: 124px;
+    margin-left: 6px;
+    background-position:center;
 }
 .imgcarta{
-    width: 210px;
-    height: 112px;  
+    width: 202px;
+    height: 118px; 
 }
 
 
 .secciontiposubtipocarta{
-    border: 1px solid black;
-    border-radius:20%;
+    border: 3px ridge #808080;
+
+    border-radius:16px/40px;
     padding:5px;
     font-size: 0.7rem;
+    width: 202px;
+    height: 11px;
 
     display:flex;
     justify-content: space-between;
@@ -98,26 +102,32 @@ body{
     display: inline-block;
 }
 .imgexpansion{
-    width: 15px;
-    height:15px;
+    width: 11px;
+    height:11px;
 }
 
 .secciondescripcioncarta{
-    width: 210px;
-    height: 110px;  
-    border: 1px solid black;
+    border: 3px ridge #808080;
+
+    box-sizing: border-box;
+    width: 207px;
+    height: 118px;
+    margin-left:5px;
     font-size: 0.6rem;
-    /* background-color:#d5dfe9 */
-    /* background-color:#58554c ; */
-    
 }   
 
 
 .seccionfuerzaresistencia{
-    width: 30px;
-    border: 1px solid black;
-    font-size: 0.6rem;
+    border: 3px ridge #808080;
 
+    z-index: 3;
+    margin-left: 173px;
+    margin-top: -2px;
+    width: 30px;
+    
+    font-size: 0.6rem;
+    border-radius: 16px/40px;
+    text-align: center;
 }
 .seccionfuerzaresistencia>ol>li{
     display: inline-block;
@@ -126,7 +136,8 @@ body{
 
 
 .piecarta{
-    border: 1px solid black;
+    z-index:1;
+    margin-top: -10px;;
     font-size: 0.5rem;
 } 
 .piecarta>ol>li{
