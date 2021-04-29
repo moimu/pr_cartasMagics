@@ -1,3 +1,14 @@
+:root{
+    --color-negro:#523106;
+    --color-blanco:#f0e9e2;
+    --color-principal: #75cfb8;
+    --color-secundario: #bbdfc8;
+    --color-contraste: #ffc478;
+    --color-prueba1: #ffcb91;
+    --color-prueba2: #ffefa1;
+    --color-prueba1: #94ebcd;
+    --color-prueba2: #6ddccf;
+}
 *{
     margin: 0;
 	padding: 0;
@@ -7,29 +18,64 @@
 	vertical-align: baseline; 
     font-weight: 600;
     list-style:none;
+    outline: none;
+    text-decoration: none;
 }
-/* maquetación index */
-body{
-    
-}
+
+/* maquetación html index */
+
 .indexheader{
-    position: sticky;
-    top: 0;
-    
+    height:8vh;
     background-color: grey;  
 }
+.logoymenu{
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid black;
+}
+.logoymenu>header{
+    display:flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 434px;
+    height: 73px;
+}
+.logoymenu>header>h1{
+    font-size: 2.2rem;
+}
+.imglogo{
+    height: 75px;
+    width: 75px;
+}
+.logoymenu>main{
+    width: 210px;
+    height: 74px;
+    margin-top: 18px;
+}
+
+.menu>ol>li{
+    font-size: 1rem;
+}
+.menu>ol>li:hover{
+    background-color: orange;
+}
+
 .indexmain{
+    min-height: 64vh;
     height:100%;
-    width:100%;
-    background-color: blanchedalmond;
-    padding:20px;
+    width:100vw;
+    background-color: white;
+    padding: 25px;
+    box-sizing: border-box;
 
     display: flex;
     flex-wrap:wrap;
-    justify-content: space-evenly;
 }
 .indexfooter{
    background-color: grey;  
+    width:100vw;
+    
+    bottom:0;
 } 
 
 
@@ -120,7 +166,6 @@ body{
 .seccionfuerzaresistencia{
     border: 3px ridge #808080;
 
-    z-index: 3;
     margin-left: 173px;
     margin-top: -2px;
     width: 30px;
@@ -136,7 +181,6 @@ body{
 
 
 .piecarta{
-    z-index:1;
     margin-top: -10px;;
     font-size: 0.5rem;
 } 
@@ -144,3 +188,35 @@ body{
     display: inline-block;
     margin:2px;
 } 
+.piecartav2{
+    margin-top: 11px;;
+    font-size: 0.5rem; 
+}
+.piecartav2>ol>li{
+    display: inline-block;
+    margin:2px;
+} 
+
+/* clase de thumbnail */
+
+.thumbnail{
+    width: 170px;
+    height: 150px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headerthumbnail{
+    width: 175px;
+    height: 27px;
+}
+.headerthumbnail>h1{
+    font-size: 0.8rem;
+}
+.imgthumbnail{
+    width: 175px;
+    height: 125px;
+}

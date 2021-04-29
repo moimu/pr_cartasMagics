@@ -11,18 +11,20 @@
 <body class="body" >
 
     <header class="indexheader"> 
-            <div class="logoymenu">
-
-                <a href="#" class="logo"> MI LOGO </a>
-
-                <nav class="menu">
-                    <ol>
-                        <li><a href="#"> ... </a></li>
-                        <li><a href="#"> ... </a></li>
-                    </ol>
-                </nav>
-
-            </div>
+            <section class="logoymenu">
+                <header >
+                    <img src="./img/fondos/shiny.png" class="imglogo">
+                    <h1> Galeria de magics </h1>
+                </header>
+                <main>
+                    <nav class="menu">
+                        <ol>
+                            <li><a href="index.php"> Galeria </a></li>
+                            <li><a href="crearCarta.php"> Crear carta </a></li>
+                        </ol>
+                    </nav>
+                </main>
+            </section>
     </header>
     <main class="indexmain">
 
@@ -38,7 +40,7 @@
             <section>
                 <h1> Articulos de interés </h1>
                 <p>
-                    <video width="320" height="240" controls>
+                    <video width="220" height="140" controls>
                         <source src="movie.mp4" type="video/mp4">
                         texto a mostrar si no se carga el video
                     </video>  

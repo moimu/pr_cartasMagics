@@ -22,26 +22,26 @@ declare(strict_types=1);
 class Carta {
 
     private int $idcarta;
-    public string $nombre;
-    public string $fondo;
-    public string $shiny;
-    public string $mana1;
-    public int $cantmana1;
-    public string $mana2;
-    public int $cantmana2;
-    public string $cantmanainc;
-    public string $img;
-    public string $tipo;
-    public string $tipoespecifico; 
-    public string $expansion; 
-    public string $habilidad;
-    public string $imgtierra; 
-    public string $textambiente;
-    public int $fuerza;
-    public int $resistencia;
-    public string $artista;
-    public int $numcoleccion;
-    public string $colorbase;
+    private string $nombre;
+    private string $fondo;
+    private string $shiny;
+    private string $mana1;
+    private int $cantmana1;
+    private string $mana2;
+    private int $cantmana2;
+    private string $cantmanainc;
+    private string $img;
+    private string $tipo;
+    private string $tipoespecifico; 
+    private string $expansion; 
+    private string $habilidad;
+    private string $imgtierra; 
+    private string $textambiente;
+    private int $fuerza;
+    private int $resistencia;
+    private string $artista;
+    private int $numcoleccion;
+    private string $colorbase;
 
     public function __construct(
         $idcarta, $nombre, $fondo, $shiny, $mana1, $cantmana1, $mana2, $cantmana2, $cantmanainc,
@@ -67,4 +67,129 @@ class Carta {
         fuerza: {$this-> fuerza}<br> resistencia: {$this-> resistencia}<br>
         artista: {$this-> artista}<br> numero coleccion: {$this-> numcoleccion}<br> colorbase: {$this-> colorbase}<br><br>";
     }
+    /**
+     * Este método imprime la estructura html de la carta y sus respectivos datos
+     * 
+     * @return string <modelo de la carta>
+     */
+    public function imprime(){
+        echo "  
+            <div class=bordecarta>
+                <div class=fondocarta style=background-image:url({$this-> fondo})>
+                     
+                    <article class=articulocarta>
+
+                        <header class=encabezadocarta style=background-color:{$this->colorbase}>
+                            <h1> {$this-> nombre} </h1>
+                            <div>";
+                            if($this-> cantmanainc != ""){
+                                echo "<img class=imgmana src={$this-> cantmanainc}>";
+                            }
+                            if($this-> mana1 != ""){
+                                for($i=0; $i<$this-> cantmana1; $i++){
+                                    echo "<img class=imgmana src={$this-> mana1}>";
+                                }
+                            }
+                            if($this-> mana2 != ""){
+                                for($i=0; $i<$this-> cantmana2; $i++){
+                                    echo "<img class=imgmana src={$this-> mana2}>";
+                                }  
+                            }
+                            echo "             
+                            </div>
+                        </header>
+
+                        <section class=seccionimagen>
+                            <img class=imgcarta src={$this-> img}>
+                            
+                            {$this-> shiny}
+                            {$this-> imgtierra}
+                        </section>
+
+                        <section class=secciontiposubtipocarta style=background-color:{$this->colorbase} >
+
+                            <ol>
+                                <li class=itemtipo>
+                                    {$this-> tipo} 
+                                </li>
+                                -
+                                <li class=itemsubtipo>
+                                    {$this-> tipoespecifico}
+                                </li>
+                            </ol>
+                            <img class=imgexpansion src={$this-> expansion}>
+
+                        </section>
+                        
+                        <section class=secciondescripcioncarta style=background-color:{$this->colorbase}>
+                            <ol>
+                                <li class=itemhabilidad>
+                                    {$this-> habilidad}
+                                </li>
+                                <li class=itemtextambiente>
+                                    {$this-> textambiente}
+                                </li>
+                            </ol>
+                        </section>
+                        ";
+                        if( $this-> tipo !== "Instantáneo" && $this-> tipo !== "Encantamiento" ){
+                            echo "
+                                <footer class=piecarta>
+                                    <section class=seccionfuerzaresistencia style=background-color:{$this->colorbase} >
+                                    <ol>
+                                        <li class=itemfuerza>
+                                            {$this-> fuerza}
+                                        </li>
+                                        /
+                                        <li class=itemresistencia>
+                                            {$this-> resistencia}
+                                        </li>
+                                    </ol>
+                                    </section>
+                                    <ol>
+                                        <li class=itemhabilidad>
+                                            {$this-> artista}   
+                                        </li>
+                                        <li class=itemnumcoleccion>
+                                            <p>numero:{$this-> numcoleccion}</p>
+                                        </li>
+                                    </ol>
+                                </footer>
+                            ";
+                        }
+                        else{
+                            echo "
+                                <footer class=piecartav2>
+                                    <ol>
+                                        <li class=itemhabilidad>
+                                            {$this-> artista}   
+                                        </li>
+                                        <li class=itemnumcoleccion>
+                                            <p>numero:{$this-> numcoleccion}</p>
+                                        </li>
+                                    </ol>
+                                </footer>
+                            ";       
+                        }
+                        echo "    
+                    </article>
+                </div>
+            </div>
+        ";
+    }
+    public function thumbnail(){
+        echo "
+            <section class=thumbnail>
+
+                <header class=headerthumbnail> 
+                    <h1> {$this-> nombre} </h1>
+                 </header>
+                <main> 
+                    <img class=imgthumbnail src={$this-> img} alt={$this-> nombre}> 
+                </main>
+
+            </section>
+        ";
+    }
+    
 }
