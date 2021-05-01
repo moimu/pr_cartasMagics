@@ -80,12 +80,23 @@
 
 
 /* maquetación carta */
+
 .bordecarta{
+    opacity: 0;
+    /* z-index: 0; */
+
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+
     background-color: black;
     border-radius: 4%;
     width:240px;
-    height:350px;
-    margin-bottom: 20px;
+    height:350px; 
+    
 }
 .fondocarta{
     display: flex;
@@ -200,6 +211,9 @@
 /* clase de thumbnail */
 
 .thumbnail{
+    /* opacity:0; */
+    /* z-index: 1; */
+
     width: 170px;
     height: 150px;
     background-color: white;

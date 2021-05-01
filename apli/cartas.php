@@ -24,8 +24,7 @@ ON ca.`idtipo`= tip.`idtipo`
 INNER JOIN `expansiones` ex
 ON ca.`idexpansion`= ex.`idexpansion`
 INNER JOIN `imgtierras` imgt
-ON ca.`idimgtierra`= imgt.`idimgtierra`
-ORDER BY `idcarta` "); 
+ON ca.`idimgtierra`= imgt.`idimgtierra` "); 
 
 $sentencia -> execute();
 

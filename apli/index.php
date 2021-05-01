@@ -29,9 +29,15 @@
     <main class="indexmain">
 
         <?php
-            include('fxImprimeCartas.php');
-
-            ImprimeCartas($cartas);
+            
+            include('cartas.php');
+    
+            foreach($cartas as $clave=>$valor){
+                $valor->thumbnail();     
+                $valor->imprime(); 
+            }
+        
+           
         ?>
 
     </main>
@@ -67,6 +73,8 @@
             <small> Copyright © 2021 MoimuMagic — <a href="#">Términos y Condiciones del Servicio</a> </small>
         </p>
     </footer>
-
+    <script src="./js/script.js" language="javascript" type="text/javascript"></script>
+    
 </body>
+
 </html>

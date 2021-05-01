@@ -68,18 +68,20 @@ class Carta {
         artista: {$this-> artista}<br> numero coleccion: {$this-> numcoleccion}<br> colorbase: {$this-> colorbase}<br><br>";
     }
     /**
-     * Este método imprime la estructura html de la carta y sus respectivos datos
+     * Este método imprime la estructura html de la carta 
+     * y sus respectivos datos para mostrar a cliente.
      * 
      * @return string <modelo de la carta>
      */
     public function imprime(){
+        $idneg = $this-> idcarta*-1;
         echo "  
-            <div class=bordecarta>
+            <div class=bordecarta id=$idneg>
                 <div class=fondocarta style=background-image:url({$this-> fondo})>
                      
                     <article class=articulocarta>
 
-                        <header class=encabezadocarta style=background-color:{$this->colorbase}>
+                        <header class=\"encabezadocarta borderojo\" style=background-color:{$this->colorbase}>
                             <h1> {$this-> nombre} </h1>
                             <div>";
                             if($this-> cantmanainc != ""){
@@ -179,7 +181,7 @@ class Carta {
     }
     public function thumbnail(){
         echo "
-            <section class=thumbnail>
+            <section class=thumbnail id={$this-> idcarta}>
 
                 <header class=headerthumbnail> 
                     <h1> {$this-> nombre} </h1>
