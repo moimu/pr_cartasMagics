@@ -28,12 +28,12 @@
     </header>
     <section class="seccionbotones">
         <nav>
-            <button class="button nomAsc">Nombre ASC</button>
-            <button class="button nomDesc">Nombre DESC</button>
-            <button class="button estAsc">Establecido ASC</button>
-            <button class="button estDesc">Establecido DESC</button>
-            <button class="button tipoAsc">Tipo ASC</button>
-            <button class="button tipoDesc">Tipo DESC</button>
+            <button class="button" id="nomAsc">Nombre ASC</button>
+            <button class="button" id="nomDesc">Nombre DESC</button>
+            <button class="button" id="estAsc">Establecido ASC</button>
+            <button class="button" id="estDesc">Establecido DESC</button>
+            <button class="button" id="tipoAsc">Tipo ASC</button>
+            <button class="button" id="tipoDesc">Tipo DESC</button>
         </nav>
     </section>
     <main class="indexmain">
@@ -47,13 +47,13 @@
                 $valor->imprime(); 
             }
         
-            $ordennombre; 
-            $ordenidcarta;
-            $ordentipo;
+            // $ordennombre; 
+            // $ordenidcarta;
+            // $ordentipo;
 
-            var_dump($ordennombre);
-            var_dump($ordenidcarta);
-            var_dump($ordentipo);
+            // var_dump($ordennombre);
+            // var_dump($ordenidcarta);
+            // var_dump($ordentipo);
 
            
         ?>
