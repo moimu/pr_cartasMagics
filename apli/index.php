@@ -26,8 +26,18 @@
                 </main>
             </section>
     </header>
+    <section class="seccionbotones">
+        <nav>
+            <button class="button nomAsc">Nombre ASC</button>
+            <button class="button nomDesc">Nombre DESC</button>
+            <button class="button estAsc">Establecido ASC</button>
+            <button class="button estDesc">Establecido DESC</button>
+            <button class="button tipoAsc">Tipo ASC</button>
+            <button class="button tipoDesc">Tipo DESC</button>
+        </nav>
+    </section>
     <main class="indexmain">
-
+        
         <?php
             
             include('cartas.php');
@@ -37,6 +47,14 @@
                 $valor->imprime(); 
             }
         
+            $ordennombre; 
+            $ordenidcarta;
+            $ordentipo;
+
+            var_dump($ordennombre);
+            var_dump($ordenidcarta);
+            var_dump($ordentipo);
+
            
         ?>
 

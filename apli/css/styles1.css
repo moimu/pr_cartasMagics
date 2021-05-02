@@ -22,7 +22,7 @@
     text-decoration: none;
 }
 
-/* maquetación html index */
+/* maquetación principal index */
 
 .indexheader{
     height:8vh;
@@ -31,7 +31,6 @@
 .logoymenu{
     display: flex;
     justify-content: space-between;
-    border: 4px solid black;
 }
 .logoymenu>header{
     display:flex; 
@@ -41,7 +40,8 @@
     height: 73px;
 }
 .logoymenu>header>h1{
-    font-size: 2.2rem;
+    font-size: 2.3rem;
+    color:white;
 }
 .imglogo{
     height: 75px;
@@ -77,6 +77,29 @@
     
     bottom:0;
 } 
+
+/* maquetación botones */
+
+.seccionbotones{
+    width:100%;
+    height: 50px;
+}
+.seccionbotones>nav{
+    
+    height: 50px;
+    margin: 5px;
+    display:flex;
+    justify-content: flex-end;
+}
+.button{
+    font-size: 1rem;
+    color: white;
+    width: 100px;
+    height: 50px;
+    background-color: grey;  
+    border: 2px solid white;
+    border-radius: 9px;
+}
 
 
 /* maquetación carta */

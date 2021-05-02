@@ -37,6 +37,10 @@ while($sentencia->fetch()){
     $cartas[] = new Carta($idcarta, $nombre ,$fondo, $shiny, $mana1 , $cantmana1 ,$mana2,
     $cantmana2, $cantmanainc, $img ,$tipo, $tipoespecifico , $expansion ,$habilidad,
     $imgtierra, $textambiente, $fuerza ,$resistencia, $artista , $numcoleccion, $colorbase);
+
+    $ordennombre[] = $nombre;
+    $ordenidcarta[] = $idcarta;
+    $ordentipo[] = $tipo;
 }
 
 // var_dump($cartas);

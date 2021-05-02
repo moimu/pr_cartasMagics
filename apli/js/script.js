@@ -62,3 +62,34 @@ cartas.forEach( function(carta){
     } );
 
 });
+
+/**
+ * ordenación por nombre
+ * 
+ * recorro todos los thumnail y obtengo su atributo
+ * name que corresponde a nombre de la carta magic, 
+ * y su atributo tipo que corresponde al tipo de la carta
+ * los ordeno en su vector contenedor.
+ * 
+ * ordenEstablecidoAsc orden natural BD
+ * ordenEstablecidoDesc invertida
+ * ordenAlfabeticoAsc orden natural BD ordenado alfabeticamente
+ * ordenAlfabeticoDesc invertida
+ * ordenTipoAsc orden alfabetico Asc por tipo de carta
+ * ordenTipoDesc invertida
+ */
+const names = [];
+const tipos= [];
+let cont = 0;
+thumbnail.forEach( function(thumb){
+    
+    names[cont] = thumb.getAttribute("name");
+    tipos[cont] = thumb.getAttribute("tipo");
+    cont++;
+});
+const ordenEstablecidoAsc = [...names];
+const ordenEstablecidoDesc = [...names].reverse();
+const ordenAlfabeticoAsc = names.sort();
+const ordenAlfabeticoDesc = [...ordenAlfabeticoAsc].reverse();
+const ordenTipoAsc = tipos.sort();
+const ordenTipoDesc = [...tipos].reverse();

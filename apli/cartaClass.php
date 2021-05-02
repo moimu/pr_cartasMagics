@@ -181,13 +181,13 @@ class Carta {
     }
     public function thumbnail(){
         echo "
-            <section class=thumbnail id={$this-> idcarta}>
+            <section class=thumbnail id={$this-> idcarta} name={$this->nombre} tipo={$this->tipo}>
 
                 <header class=headerthumbnail> 
-                    <h1> {$this-> nombre} </h1>
+                    <h1> {$this->nombre} </h1>
                  </header>
                 <main> 
-                    <img class=imgthumbnail src={$this-> img} alt={$this-> nombre}> 
+                    <img class=imgthumbnail src={$this->img} alt={$this->nombre}> 
                 </main>
 
             </section>
