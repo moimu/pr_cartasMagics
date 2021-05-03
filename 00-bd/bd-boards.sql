@@ -53,6 +53,7 @@ CREATE TABLE `cartas`(
     `artista` VARCHAR(50),
     `numcoleccion` SMALLINT,
     `colorbase` VARCHAR(30),
+    `cantidad` SMALLINT UNSIGNED,
     PRIMARY KEY (`idcarta`),
     FOREIGN KEY (`idfondo`) REFERENCES `fondos` (`idfondo`),
     FOREIGN KEY (`idshiny`) REFERENCES `fondos` (`idfondo`),

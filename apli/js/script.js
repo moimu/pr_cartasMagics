@@ -12,6 +12,8 @@ const cartas = document.querySelectorAll(".bordecarta");
 function ocultarTodo(){
     cartas.forEach( function( carta ){
         carta.style.opacity = 0;
+        carta.style.zIndex = -1;
+
     });
 }
 /**
@@ -32,7 +34,8 @@ thumbnail.forEach(function( thumb ){
         ocultarTodo();
         cartas.forEach( function( carta ){
             if( thumb.id == carta.id*-1 ){
-                carta.style.opacity = 1;   
+                carta.style.opacity = 1; 
+                carta.style.zIndex = 1; 
             }
         });
     });
@@ -170,4 +173,21 @@ tipoDesc.addEventListener( 'click' , function (){
         });
     } );  
     cont=0;
+});
+/**
+ * Cartas en total que tenemos y 
+ * cartas diferentes que tenemos.
+ * 
+ * recorremos todos los thumbnail y sumamos todas las
+ * cantidades de cartas existentes para obtener :
+ * totalcartas, En el forEach para todos los thumnail 
+ * metemos contador totalcartasdif resultará total de 
+ * cartas diferentes que tenemos.
+ * 
+*/
+let totalcartas = 0;
+let totalcartasdif = 0;
+thumbnail.forEach( function(thumb){
+    totalcartas = totalcartas + parseInt( thumb.getAttribute("cantidad") , 10);
+    totalcartasdif++;
 });

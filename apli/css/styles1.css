@@ -72,11 +72,22 @@
     flex-wrap:wrap;
 }
 .indexfooter{
-   background-color: grey;  
-    width:100vw;
     
-    bottom:0;
+    position:absolute;
+    bottom:15px;
 } 
+.indexfooter>section{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.indexfooter>section>header{
+    margin-left:15px;
+}
+.indexfooter>section>p{
+    margin-left:20px;
+}
 
 /* maquetación botones */
 
@@ -85,7 +96,6 @@
     height: 50px;
 }
 .seccionbotones>nav{
-    
     height: 50px;
     margin: 5px;
     display:flex;
@@ -106,9 +116,10 @@
 
 .bordecarta{
     opacity: 0;
-    /* z-index: 0; */
+    z-index: -1;
+    position: fixed;
 
-    position: absolute;
+    /* position: absolute; */
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -230,13 +241,26 @@
     display: inline-block;
     margin:2px;
 } 
+/* 
+.roja{
+    border: 3px ridge #808080;
+}
+.azul{
+    border: 3px ridge #808080;
+}
+.verde{
+    border: 3px ridge #808080;
+}
+.negra{
+    border: 3px ridge #808080;
+}
+.blanca{
+    border: 3px ridge #808080;
+} */
 
 /* clase de thumbnail */
 
 .thumbnail{
-    /* opacity:0; */
-    /* z-index: 1; */
-
     width: 170px;
     height: 150px;
     background-color: white;
@@ -249,9 +273,10 @@
 .headerthumbnail{
     width: 175px;
     height: 27px;
+    text-align: center;
 }
 .headerthumbnail>h1{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 .imgthumbnail{
     width: 175px;

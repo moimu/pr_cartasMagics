@@ -57,41 +57,18 @@
 
            
         ?>
-
-    </main>
-    <footer class="indexfooter">
-        <nav>
-            <section>
-                <h1> Articulos de interés </h1>
-                <p>
-                    <video width="220" height="140" controls>
-                        <source src="movie.mp4" type="video/mp4">
-                        texto a mostrar si no se carga el video
-                    </video>  
-                    Te asaltan dudas cuando juegas a magic con tu amigos, 
-                    ehca un vistazo a este completo tutorial y aprenderas 
-                    como lo hacen los profesionales.
-                    
-                </p>
-                <p>
-                    <img src="cartaYforrada.jpg"> 
-                    Tus magic pueden valer mucho dinero.
-                    Protejelas con estos sencillos pasos...
-                    <a href="articles/kindplus/1"> Leer más...</a>
-                </p>
-                
-            </section>
-            <ol>
-                <li> <a href="#"> Sobre nosotros </a> </li>
-                <li> <a href="#"> Deja tu comentario </a> </li>
-                <li> <a href="#"> Ubicación </a> </li>
-            </ol>
-        </nav>
-        <p>
-            <small> Copyright © 2021 MoimuMagic — <a href="#">Términos y Condiciones del Servicio</a> </small>
-        </p>
-    </footer>
     <script src="./js/script.js" language="javascript" type="text/javascript"></script>
+    </main>
+
+    <footer class="indexfooter">
+
+        <section>
+            <header> <h1> Conteo de cartas </h1> </header>
+            <p>Total de cartas:  <script> document.writeln(totalcartas); </script> </p>
+            <p>Total de cartas diferentes: <script> document.writeln(totalcartasdif); </script> </p>
+        </section>
+
+    </footer>
     
 </body>
 
