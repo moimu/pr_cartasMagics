@@ -49,9 +49,21 @@
     border: 2px solid black;
     padding:25px;
     
-    width: 800px;
+    width: 700px;
     height: 100%;
+}
+.formcrearcarta>fieldset{
+    width: 700px;
+    height: 100%;
+    width: 672px;
+    margin-top: 13px;
+
     display:flex;
     flex-direction: column;
     flex-wrap:wrap;
+}
+
+.descripcionesform>div>label>input{
+    width: 665px;
+    height: 62px;
 }

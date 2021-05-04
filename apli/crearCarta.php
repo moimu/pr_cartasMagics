@@ -27,7 +27,7 @@
 </header>
 
 <main class="maincrearcarta">
-    <form class="formcrearcarta" method="POST" enctype="application/x-www-form-urlencoded" action="insertarCarta.php">
+    <form class="formcrearcarta" name="crear-carta" method="POST" enctype="multipart/formdata" action="insertarCarta.php">
             <fieldset> 
                 <legend>Nueva carta</legend>
                 <div><label> Nombre: <input type="text" name="nombre" maxlength="100"required><label></div>
@@ -90,7 +90,8 @@
                     <div><label> Cantidad Incoloro: <input type="number" name="idmanaincoloro" min="0" max="10" placeholder="0" required><label></div>  
             </fieldset>
             <fieldset>
-                <div><label>IMAGEN:<input type="text" name="img" ><label></div>
+                <legend>Imagen</legend> 
+                <div><label><input type="file" name="img" ><label></div>
             </fieldset>
             <fieldset>
                 <legend>Tipo y especialidad</legend> 
@@ -139,9 +140,9 @@
                     <label>Conflux rojo<input type="radio" name="idexpansion" value="5"><label>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="descripcionesform">
                 <legend> Habilidades y Ambientación </legend> 
-                <div><label> Descripción de habilidades: <input type="text" name="habilidad" maxlength="400" size="400"><label></div>
+                <div><label> Descripción de habilidades: <input type="text" name="habilidad" maxlength="400" size="400" height="150"><label></div>
                 <div><label> Texto Ambientación <input type="text" name="textambiente" maxlength="400" size="400"><label></div>
             </fieldset>
             <fieldset>
