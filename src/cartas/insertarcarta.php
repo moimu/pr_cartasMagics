@@ -54,7 +54,7 @@ $artista,
 $numcoleccion ];
 var_dump($var);
 
-include('conexionBd.php');
+include('conexionbd.php');
 
 
 if(isset($_POST['nombreCompleto'])){

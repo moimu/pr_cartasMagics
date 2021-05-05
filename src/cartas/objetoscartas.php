@@ -1,8 +1,8 @@
 <?php
 
-include('conexionBd.php');
-include('cartaClass.php');
-
+include('conexionbd.php');
+// use Moi\Cartas\Carta;
+// include('cartaclass.php');
 
 $sentencia = $db->prepare("SELECT ca.`idcarta`, ca.`nombre`, fo.`direccion`, shi.`direccion`
 ,ma1.`direccion` ,ca.`cantmana1`,ma2.`direccion` ,ca.`cantmana2`,mainc.`direccion`, ca.`img`
@@ -27,28 +27,20 @@ ON ca.`idexpansion`= ex.`idexpansion`
 INNER JOIN `imgtierras` imgt
 ON ca.`idimgtierra`= imgt.`idimgtierra` "); 
 
-$sentencia -> execute();
-
 $sentencia -> bind_result(
     $idcarta, $nombre ,$fondo, $shiny, $mana1 , $cantmana1 ,$mana2,  $cantmana2,
     $cantmanainc, $img ,$tipo, $tipoespecifico , $expansion ,$habilidad,  $imgtierra,
     $textambiente, $fuerza ,$resistencia, $artista , $numcoleccion, $colorbase, $cantidad
 );
+
+$sentencia -> execute();
+
 while($sentencia->fetch()){
     $cartas[] = new Carta($idcarta, $nombre ,$fondo, $shiny, $mana1 , $cantmana1 ,$mana2,
     $cantmana2, $cantmanainc, $img ,$tipo, $tipoespecifico , $expansion ,$habilidad,
     $imgtierra, $textambiente, $fuerza ,$resistencia, 
     $artista , $numcoleccion, $colorbase, $cantidad);
-
-    $ordennombre[] = $nombre;
-    $ordenidcarta[] = $idcarta;
-    $ordentipo[] = $tipo;
 }
-
-// var_dump($cartas);
-// foreach($cartas as $clave=>$valor){
-//     $valor->colorbase;
-// }
 
 $sentencia->close();    
 $db->close();

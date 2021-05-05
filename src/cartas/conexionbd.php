@@ -2,6 +2,7 @@
 /**
  * conexion a la base de datos magics 
  */
+
 $servidor = "localhost"; 
 $user = "root"; 
 $password = null; 

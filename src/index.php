@@ -20,7 +20,7 @@
                     <nav class="menu">
                         <ol>
                             <li><a href="index.php"> Galeria </a></li>
-                            <li><a href="crearCarta.php"> Crear carta </a></li>
+                            <li><a href="./cartas/crearcarta.php"> Crear carta </a></li>
                         </ol>
                     </nav>
                 </main>
@@ -40,22 +40,13 @@
         
         <?php
             
-            include('cartas.php');
+            include('./cartas/objetoscartas.php');
     
             foreach($cartas as $clave=>$valor){
                 $valor->thumbnail();     
                 $valor->imprime(); 
             }
         
-            // $ordennombre; 
-            // $ordenidcarta;
-            // $ordentipo;
-
-            // var_dump($ordennombre);
-            // var_dump($ordenidcarta);
-            // var_dump($ordentipo);
-
-           
         ?>
     <script src="./js/script.js" language="javascript" type="text/javascript"></script>
     </main>

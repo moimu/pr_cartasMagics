@@ -1,26 +1,43 @@
 <?php
 declare(strict_types=1);
-// namespace Moimu\;
+
+namespace Moi;
 
 /**
  * Clase para instanciar cartas magic
  * 
- * Esta clase permite instanciar un objeto carta con todos sus requerimientos, 
- * y gestionar estos parámetros como artributos del objeto
+ * Esta clase permite instanciar un objeto carta con todos
+ * sus requerimientos, y gestionar estos parámetros descritos
+ * en el constructor como atributos privados del objeto.
  * 
- * @param int idcarta <>
- * @param string nombre <>
- * @param string mana1 <>
- * @param int cantmana1 <>
- * @param string mana2 <>
- * @param int cantmana2 <>
- * @param int cantmanainc <>
+ * @param int idcarta <id de la carta>
+ * @param string nombre <nombre de carta>
+ * @param string fondo < url del fondo>
+ * @param string shiny < url cover shiny>
+ * @param string mana1 < url primer mana>
+ * @param int cantmana1 <cantidad numero primer mana>
+ * @param string mana2 < url segundo mana>
+ * @param int cantmana2 <cantidad numero segundo mana>
+ * @param string cantmanainc <url mana incoloro>
+ * @param string img < url imagen carta>
+ * @param string tipo < descripcion del tipo>
+ * @param string tipoespecifico < descripcion tipo especifico>
+ * @param string expansion < url expansión>
+ * @param string habilidad <descripción de habilidades>
+ * @param string imgtierra < imagen tierra>
+ * @param string textambiente <descripción texto ambiente>
+ * @param int fuerza <nivel de fuerza>
+ * @param int resistencia < nivel de resistencia>
+ * @param string artista <nombre creador ilustración carta>
+ * @param int numcoleccion < numero correspondiente a expansion>
+ * @param string colorbase < color bordes y ambiente >
+ * @param int cantidad < cantidad de cartas >
  * 
+ * @author Moises correodemomuar@gmail.com
  * @version 1.1 objeto carta
- * @autor Moises Antonio Munoz Aranda
  */
-class Carta {
 
+class Carta {
     private int $idcarta;
     private string $nombre;
     private string $fondo;
@@ -74,7 +91,16 @@ class Carta {
      * Este método imprime la estructura html de la carta 
      * y sus respectivos datos para mostrar a cliente.
      * 
-     * @return string <modelo de la carta>
+     * En div class="bordecarta" se guarda el id de la carta
+     * en negativo, de esta manera es el reflejo del thumnail
+     * donde se imprirá positivo, La estructura impresa por
+     * este método estará oculta por defecto, y mediante 
+     * el click a su thumnail id positivo, revelará su carta
+     * igual id pero negativo.
+     * Si el tipo de carta no es instantáneo o encantamiento
+     * se imprirá la estructura para fuerza y resistencia.
+     * 
+     * @return string <Estructura html y datos de carta>
      */
     public function imprime(){
         $idneg = $this-> idcarta*-1;
@@ -182,6 +208,20 @@ class Carta {
             </div>
         ";
     }
+    /**
+     * El método thumnail imprime la estructura HTML del
+     * thumnail con su datos correspondientes
+     * 
+     * El elemento section contiene el atributo name,
+     * que se utiliza para ordenar mediante Javascript los
+     * thumnail, atributo creado tipo, de igual manera se ordenan 
+     * por su tipo, atributo id se utiliza para ordenar según 
+     * vienen las cartas de la base de datos y atributo creado
+     * cantidad para mostrar total de cartas y total de cartas
+     * diferentes.
+     * 
+     * @return string <Estructura html del thumnail y datos carta>
+     */
     public function thumbnail(){
         echo "
             <section class=thumbnail id={$this-> idcarta} name={$this->nombre} tipo={$this->tipo} cantidad={$this-> cantidad}>

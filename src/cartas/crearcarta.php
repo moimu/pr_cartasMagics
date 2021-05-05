@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Creacción cartas magic </title>
-    <link rel="stylesheet" type="text/css" href="./css/styles2.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles2.css">
 </head>
 <body>
 
@@ -18,8 +18,8 @@
         <main>
             <nav class="menu">
                 <ol>
-                    <li><a href="index.php"> Galeria </a></li>
-                    <li><a href="crearCarta.php"> Crear carta </a></li>
+                    <li><a href="../index.php"> Galeria </a></li>
+                    <li><a href="crearcarta.php"> Crear carta </a></li>
                 </ol>
             </nav>
         </main>
@@ -27,7 +27,7 @@
 </header>
 
 <main class="maincrearcarta">
-    <form class="formcrearcarta" name="crear-carta" method="POST" enctype="multipart/formdata" action="insertarCarta.php">
+    <form class="formcrearcarta" name="crear-carta" method="POST" enctype="multipart/formdata" action="insertarcarta.php">
             <fieldset> 
                 <legend>Nueva carta</legend>
                 <div><label> Nombre: <input type="text" name="nombre" maxlength="100"required><label></div>
