@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Moi;
+namespace Moi\Cartas;
 
 /**
  * Clase para instanciar cartas magic

@@ -27,7 +27,7 @@
 </header>
 
 <main class="maincrearcarta">
-    <form class="formcrearcarta" name="crear-carta" method="POST" enctype="multipart/formdata" action="insertarcarta.php">
+    <form class="formcrearcarta" name="crear-carta" method="post" enctype="multipart/form-data" action="insertarcarta.php">
             <fieldset> 
                 <legend>Nueva carta</legend>
                 <div><label> Nombre: <input type="text" name="nombre" maxlength="100"required><label></div>
@@ -91,7 +91,7 @@
             </fieldset>
             <fieldset>
                 <legend>Imagen</legend> 
-                <div><label><input type="file" name="img" ><label></div>
+                <div><label><input type="file" name="imagen" ><label></div>
             </fieldset>
             <fieldset>
                 <legend>Tipo y especialidad</legend> 

@@ -43,8 +43,8 @@
             include('./cartas/objetoscartas.php');
     
             foreach($cartas as $clave=>$valor){
-                $valor->thumbnail();     
-                $valor->imprime(); 
+                echo $valor->thumbnail();     
+                echo $valor->imprime(); 
             }
         
         ?>
