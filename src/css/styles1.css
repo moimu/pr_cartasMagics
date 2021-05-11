@@ -19,45 +19,49 @@
     font-weight: 600;
     list-style:none;
     outline: none;
-    text-decoration: none;
+    text-decoration: none; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* maquetación principal index */
 
 .indexheader{
-    height:8vh;
-    background-color: grey;  
+    height: 92px;
+    /* background-color: rgb(80, 77, 77); */
+    background: linear-gradient(to right, #2c55dd, white);  
 }
 .logoymenu{
     display: flex;
     justify-content: space-between;
 }
 .logoymenu>header{
-    display:flex; 
+    width: 318px;
+    height: 71px;
+    padding: 10px;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 434px;
-    height: 73px;
+    justify-content: center;
 }
 .logoymenu>header>h1{
     font-size: 2.3rem;
     color:white;
 }
 .imglogo{
-    height: 75px;
-    width: 75px;
+    height: 82px;
+    width: 82px;
 }
 .logoymenu>main{
     width: 210px;
-    height: 74px;
-    margin-top: 18px;
+    height: 91px;
+    display: flex;
+    align-items: center;
 }
 
 .menu>ol>li{
     font-size: 1rem;
-}
-.menu>ol>li:hover{
-    background-color: orange;
+    list-style:none;
+    outline: none;
+    color:white;
 }
 
 .indexmain{
@@ -65,15 +69,15 @@
     height:100%;
     width:100vw;
     background-color: white;
-    padding: 25px;
+    padding: 43px;
     box-sizing: border-box;
 
     display: flex;
     flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
 }
 .indexfooter{
-    
-    position:absolute;
     bottom:15px;
 } 
 .indexfooter>section{
@@ -89,7 +93,7 @@
     margin-left:20px;
 }
 
-/* maquetación botones */
+/* maquetación botones orden cartas */
 
 .seccionbotones{
     width:100%;
@@ -99,14 +103,14 @@
     height: 50px;
     margin: 5px;
     display:flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .button{
     font-size: 1rem;
     color: white;
     width: 100px;
     height: 50px;
-    background-color: grey;  
+    background-color: #2c55dd;
     border: 2px solid white;
     border-radius: 9px;
 }
@@ -281,4 +285,73 @@
 .imgthumbnail{
     width: 175px;
     height: 125px;
+}
+
+/* creacción de carta */
+
+.maincrearcarta{
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.formcrearcarta{
+    /* border: 2px solid black; */
+    padding:25px;
+    max-width: 450px;
+    min-width: 349px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.formcrearcarta>fieldset{
+    width: 288px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 2px dotted black;
+    padding: 8px;
+    display:flex;
+    flex-direction: column;
+    
+    flex-wrap:wrap;
+}
+.formcrearcarta>fieldset>div{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+}
+.formcrearcarta input{
+    border: 1px solid black;
+}
+.typeradio{
+    text-align: center;
+}
+.typeradio input {
+    margin-left:15px;
+}
+.inputimg{
+    height: 24px;
+    width: 284px;
+}
+.descripcionesform>div>label>input{
+    width: 289px;
+    height: 62px;
+    border: 1px solid black;
+}
+.buttonform{
+    padding: 5px;
+    margin-top: 25px;
+	border: 1px solid black;
+    background-color: #2c55dd;
+    color:white;
+    width: 203px;
+    height: 51px;
+}
+.notrequired{
+    color:#2c55dd;
+}
+.nota{
+    font-size: 0.8rem;
 }

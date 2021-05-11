@@ -101,6 +101,8 @@ class Carta {
      * se imprirá la estructura para fuerza y resistencia.
      * 
      * @return string <Estructura html y datos de carta>
+     * 
+     * {$this-> shiny} {$this-> imgtierra}                    
      */
     public function imprime(){
         $idneg = $this-> idcarta*-1;
@@ -133,8 +135,7 @@ class Carta {
                         <section class=seccionimagen>
                             <img class=imgcarta src={$this-> img}>
                             
-                            {$this-> shiny}
-                            {$this-> imgtierra}
+                            
                         </section>
 
                         <section class=secciontiposubtipocarta style=background-color:{$this->colorbase} >

@@ -11,7 +11,6 @@ $idmanaincoloro = intval($_POST["idmanaincoloro"] +1);
 $nombreimg = $_FILES["imagen"]["name"];
 // fichero imagen 
 $archivo = $_FILES["imagen"]["tmp_name"];
-
 $idtipo = intval($_POST["idtipo"]);     
 $tipoespecifico = $_POST["tipoespecifico"];
 $idexpansion = intval($_POST["idexpansion"]);
@@ -23,74 +22,18 @@ $resistencia = intval($_POST["resistencia"]);
 $artista = $_POST["artista"];
 $numcoleccion = intval($_POST["numcoleccion"]);
 $colorbase = $_POST["colorbase"];
-
-
+$cantidad = $_POST["cantidad"];
 // ruta destino server xampp 
-$destino = $_SERVER['DOCUMENT_ROOT']."\codigodaw\pr102\src\img\dibujo\ ".$nombreimg; 
+$destino = $_SERVER['DOCUMENT_ROOT']."\codigodaw\pr102\src\img\dibujo\\".$nombreimg; 
 // ruta destino en base de datos
 $img = "img/dibujo/".$nombreimg;
 // mover fichero imagen a ruta en servidor
 move_uploaded_file($archivo, $destino);
 
-
-echo "
-nombre: $nombre<br> idfondo: $idfondo<br>
-colorbase: $colorbase<br> idshiny: $idshiny<br> 
-idmana1: $idmana1<br> cantmana1: $cantmana1<br>
-idmana2: $idmana2<br> cantmana2: $cantmana2<br>
-idmanaincoloro: $idmanaincoloro <br>img: $img <br>
-idtipo: $idtipo <br>tipoespecifico: $tipoespecifico <br>
-idimgtierra: $idimgtierra <br> idexpansion: $idexpansion <br>
-habilidad: $habilidad <br> textambiente: $textambiente <br>
-fuerza: $fuerza<br> resistencia: $resistencia<br>
-artista: $artista<br> numcoleccion: $numcoleccion<br>
-destino: $destino <br> archivo $archivo <br>
-
-";
-$var=[$nombre, 
-$idfondo, 
-$colorbase ,
-$idshiny ,
-$idmana1 ,
-$cantmana1 ,
-$idmana2 ,
-$cantmana2 ,
-$idmanaincoloro,
-$img ,
-$idtipo ,
-$tipoespecifico,
-$idimgtierra ,
-$idexpansion ,
-$habilidad ,
-$textambiente,
-$fuerza,
-$resistencia,
-$artista,
-$numcoleccion ];
-var_dump($var);
-
 include('conexionbd.php');
-
 
 if(isset($_POST['nombre'])){
 
-    /*   consulto por el nombre si hay una de igual nombre update cantidad a +1  */
-    $sentencia_0 = $db->prepare("
-        SELECT `nombre` FROM `cartas` WHERE `nombre` = ? ,`idfondo` = ?,
-        `idshiny` = ?,`idmana1` = ?,`cantmana1` = ?,`idmana2` = ?,
-        `cantmana2` = ?,`idmanaincoloro` = ?,`img` = ?,`idtipo` = ?,
-        `tipoespecifico` = ?, `idexpansion` = ?,`habilidad` = ?,
-        `idimgtierra` = ?,`textambiente` = ?,`fuerza` = ?,
-        `resistencia` = ?,`artista` = ?,`numcoleccion` = ?,`colorbase` = ?,
-        `cantidad` = ?
-    ");
-    $sentencia_0 ->bind_param('siiiiiiisisisisiisisi', $param1, $param2,
-    $param3, $param4, $param5,$param6, $param7, $param8,
-    $param9, $param10, $param11, $param12, $param13,
-    $param14, $param15, $param16, $param17, $param18,
-    $param19, $param20, $param21
-    );
-    
     $sentencia = $db->prepare("
         INSERT INTO `cartas`
         (`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
@@ -116,23 +59,18 @@ if(isset($_POST['nombre'])){
     $param15 = $textambiente ; $param16 = $fuerza ;
     $param17 = $resistencia ; $param18 = $artista ;
     $param19 = $numcoleccion ; $param20 = $colorbase ;
-    $param21 = 1;
+    $param21 = $cantidad;
     
-    $sentencia_0 ->execute();
-    if($sentencia_0 -> affected_rows > 0){
-        echo "<div class=notaimportante> <p> Esta carta ya existe </p> <div>";
+    
+    $sentencia -> execute();
+    if($sentencia->affected_rows > 0){
+        echo "<div class=notaimportante> <p> Nueva carta creada </p> <div>";
     }
     else{
-        $sentencia -> execute();
-        if($sentencia->affected_rows > 0){
-            echo "<div class=notaimportante> <p> Nueva carta creada </p> <div>";
-        }
-        else{
-            echo "<div class=notaimportante> <p> No se pudo crear nueva carta, intentelo de nuevo </p> <div>";
-        }
-        $sentencia -> close();
+        echo "<div class=notaimportante> <p> No se pudo crear nueva carta, intentelo de nuevo </p> <div>";
     }
-    $sentencia_0 -> close();
+    $sentencia -> close();
+    
 
 }
 

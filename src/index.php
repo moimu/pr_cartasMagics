@@ -13,8 +13,7 @@
     <header class="indexheader"> 
             <section class="logoymenu">
                 <header >
-                    <img src="./img/fondos/shiny.png" class="imglogo">
-                    <h1> Galeria de magics </h1>
+                    <h1> Magics </h1>
                 </header>
                 <main>
                     <nav class="menu">
@@ -28,12 +27,12 @@
     </header>
     <section class="seccionbotones">
         <nav>
-            <button class="button" id="nomAsc">Nombre ASC</button>
-            <button class="button" id="nomDesc">Nombre DESC</button>
-            <button class="button" id="estAsc">Establecido ASC</button>
-            <button class="button" id="estDesc">Establecido DESC</button>
-            <button class="button" id="tipoAsc">Tipo ASC</button>
-            <button class="button" id="tipoDesc">Tipo DESC</button>
+            <button class="button" id="nomAsc"><p>Nombre</p><p> ASC</p></button>
+            <button class="button" id="nomDesc"><p>Nombre</p><p> DESC</p></button>
+            <button class="button" id="estAsc"> ASC</button>
+            <button class="button" id="estDesc"> DESC</button>
+            <button class="button" id="tipoAsc"><p>Tipo</p><p> ASC</p></button>
+            <button class="button" id="tipoDesc"><p>Tipo</p><p> DESC</p></button>
         </nav>
     </section>
     <main class="indexmain">
@@ -43,8 +42,8 @@
             include('./cartas/objetoscartas.php');
     
             foreach($cartas as $clave=>$valor){
-                echo $valor->thumbnail();     
-                echo $valor->imprime(); 
+                $valor->thumbnail();     
+                $valor->imprime(); 
             }
         
         ?>

@@ -8,7 +8,7 @@ VALUES (''),
 
 -- fondos
 INSERT INTO `fondos`(`descripcion`,`direccion`) 
-VALUES ('Sin fondo',''),
+VALUES ('Sin fondo','img/fondos/sinfondo.png'),
 ('fondo shiny','img/fondos/shiny.png'), 
 ('fondo azul','img/fondos/azul.png'), 
 ('fondo blanco','img/fondos/blanco.png'), 
