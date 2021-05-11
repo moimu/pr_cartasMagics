@@ -1,29 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Creacción cartas magic </title>
-    <link rel="stylesheet" type="text/css" href="../css/styles1.css">
-</head>
-<body>
-
-<header class="indexheader"> 
-    <section class="logoymenu">
-        <header >
-            <h1> Magics </h1>
-        </header>
-        <main>
-            <nav class="menu">
-                <ol>
-                    <li><a href="../index.php"> Galeria </a></li>
-                    <li><a href="crearcarta.php"> Crear carta </a></li>
-                </ol>
-            </nav>
-        </main>
-    </section>
-</header>
+<?php
+include('cartas/Utiles.php');
+$util = new Utiles('Colección cartas magic','css/styles1.css','body',
+'indexheader','logoymenu','menu','indexfooter','index.php','crearcarta.php');
+$util->html_ini();
+$util->html_head();
+$util->html_body_ini();
+$util->html_header();
+?>
 
 <main class="maincrearcarta">
     <form class="formcrearcarta" name="crear-carta" method="post" enctype="multipart/form-data" action="insertarcarta.php">
@@ -161,5 +144,6 @@
     </form>
 </main>
 
-</body>
-</html>
+<?php
+$util->html_body_fin();
+$util->html_fin();

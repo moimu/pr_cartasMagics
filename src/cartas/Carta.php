@@ -164,7 +164,8 @@ class Carta {
                             </ol>
                         </section>
                         ";
-                        if( $this-> tipo !== "Instantáneo" && $this-> tipo !== "Encantamiento" ){
+                        if( $this->tipo !=="Instantáneo"&&$this->tipo!=="Encantamiento"
+                            &&$this->tipo!=="Conjuro"&&$this->tipo!=="Artefacto" ){
                             echo "
                                 <footer class=piecarta>
                                     <section class=seccionfuerzaresistencia style=background-color:{$this->colorbase} >

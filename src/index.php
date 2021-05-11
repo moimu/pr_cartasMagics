@@ -1,65 +1,39 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Galeria Magic </title>
-    <link rel="icon" href="#">
-    <link rel="stylesheet" type="text/css" href="./css/styles1.css">
-</head>
-<body class="body" >
+<?php
+include('cartas/Utiles.php');
+$util = new Utiles('Colección cartas magic','css/styles1.css','body',
+'indexheader','logoymenu','menu','indexfooter','index.php','crearcarta.php');
+$util->html_ini();
+$util->html_head();
+$util->html_body_ini();
+$util->html_header();
+?>
 
-    <header class="indexheader"> 
-            <section class="logoymenu">
-                <header >
-                    <h1> Magics </h1>
-                </header>
-                <main>
-                    <nav class="menu">
-                        <ol>
-                            <li><a href="index.php"> Galeria </a></li>
-                            <li><a href="./cartas/crearcarta.php"> Crear carta </a></li>
-                        </ol>
-                    </nav>
-                </main>
-            </section>
-    </header>
-    <section class="seccionbotones">
-        <nav>
-            <button class="button" id="nomAsc"><p>Nombre</p><p> ASC</p></button>
-            <button class="button" id="nomDesc"><p>Nombre</p><p> DESC</p></button>
-            <button class="button" id="estAsc"> ASC</button>
-            <button class="button" id="estDesc"> DESC</button>
-            <button class="button" id="tipoAsc"><p>Tipo</p><p> ASC</p></button>
-            <button class="button" id="tipoDesc"><p>Tipo</p><p> DESC</p></button>
-        </nav>
-    </section>
-    <main class="indexmain">
-        
-        <?php
-            
-            include('./cartas/objetoscartas.php');
+<section class="seccionbotones">
+    <nav>
+        <button class="button" id="nomAsc"><p>Nombre</p><p> ASC</p></button>
+        <button class="button" id="nomDesc"><p>Nombre</p><p> DESC</p></button>
+        <button class="button" id="estAsc"> ASC</button>
+        <button class="button" id="estDesc"> DESC</button>
+        <button class="button" id="tipoAsc"><p>Tipo</p><p> ASC</p></button>
+        <button class="button" id="tipoDesc"><p>Tipo</p><p> DESC</p></button>
+    </nav>
+</section>
+<main class="indexmain">
     
-            foreach($cartas as $clave=>$valor){
-                $valor->thumbnail();     
-                $valor->imprime(); 
-            }
+    <?php
         
-        ?>
+        include('cartas/objetoscartas.php');
+
+        foreach($cartas as $clave=>$valor){
+            $valor->thumbnail();     
+            $valor->imprime(); 
+        }
+    
+    ?>
     <script src="./js/script.js" language="javascript" type="text/javascript"></script>
-    </main>
-
-    <footer class="indexfooter">
-
-        <section>
-            <header> <h1> Conteo de cartas </h1> </header>
-            <p>Total de cartas:  <script> document.writeln(totalcartas); </script> </p>
-            <p>Total de cartas diferentes: <script> document.writeln(totalcartasdif); </script> </p>
-        </section>
-
-    </footer>
-    
-</body>
-
-</html>
+</main>
+  
+<?php
+$util->html_footer_index();
+$util->html_body_fin();
+$util->html_fin();

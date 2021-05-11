@@ -170,3 +170,72 @@ VALUES ('Rabia maníaca','6','1','15','1','1','0','2',
 La criatura encantada obtiene +2/+2 y no puede bloquear.',
 '1','Las astillas de sangrita hicieron al trasgo más fuerte, pero no lo hicieron más listo.',
 '0','0','Brandon Kitkouski','68','#f4e1d2','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Actuación de telemin','3','1','12','2','1','0','4',
+'img/dibujo/Actuacióndetelemin.png','8','','3',
+'El oponente objetivo nuestra cartas de la parte superior de su biblioteca hasta que muestre
+una carta de criatuta. Este jugador pone en su cementerio todas las cartas que no sean de criatura
+mostradas de esta manera, luego tú pones en juego bajo tu control la carta de criatura.',
+'1','',
+'0','0','Izzy','25','#d5dfe9','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`)  
+VALUES ('Voces del vacío','5','1','14','1','1','0','5',
+'img/dibujo/Vocesdelvacío.png','8','','4',
+'Dominio - El jugador objetivo descarta una carta por cada tipo de tierra
+básica entre las tierras que controlas.','1',
+'Cuando Grixis Chocó con el resto de Alara, los mundos empezaron a oír
+los odiosos susurros de los muertos.',
+'0','0','Rk Post','35','#eae7e0','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Cantante solar cyliana','7','1','16','1','1','0','2',
+'img/dibujo/Cantantesolarcyliana.png','2','Chamán elfo','3',
+'La Cantante solar cyliana y cada otra criatura con su mismo nombre obtiene +3/+3 hasta el
+final del turno',
+'1','"El sol brilla más sobre los fuertes."',
+'2','2','Jesper Jiping','22','#d6e7d4','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Majestad del alma','7','1','16','1','1','0','5',
+'img/dibujo/Majestaddelalma.png','8','','3',
+'Roba una cantidad de cartas igual a la fuerza de la criatura objetivo que controlas.',
+'1','Esculpe un avatar de sabiduría y fortaleza.',
+'0','0','Jesper Jiping','3','#d6e7d4','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Sello del trono vacío','4','1','13','2','1','0','4',
+'img/dibujo/Sellodeltronovacío.png','7','','3',
+'Siempre que jueges un hechizo de encantamiento, pon en juego una ficha de criatura
+Ángel blanca con la habilidad de volar.','1',
+'Cuando Asha dejó Bant, se aseguró de que el mundo tuviera protección y orden
+en su ausencia.',
+'0','0','Cyrill Van Der Haegen','38','#f3f1e6','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Piedra obstructora','3','1','12','1','1','0','4',
+'img/dibujo/Piedraobstructora.png','3','','2',
+'Las criaturas que controlan tus oponentes obtienen -1/-0.','1',
+'"La piedra es más poderosa que nunca.
+La carne que se arrastra en nuestra tierra se hará más débil y descuidada."
+-Nicalvs, archimago de Esper',
+'0','0','Warren Mahry','32','#d5dfe9','1');
