@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 namespace Moi\Cartas;
-
+use InvalidArgumentException;
 /**
  * Clase para instanciar cartas magic
  * 
@@ -152,18 +152,29 @@ class Carta {
                             <img class=imgexpansion src={$this-> expansion}>
 
                         </section>
-                        
-                        <section class=secciondescripcioncarta style=background-color:{$this->colorbase}>
-                            <ol>
+                        ";
+                        if($this-> imgtierra != ""){
+                            echo"
+                            <section class=secciondescripcioncarta >
+                                <img  src={$this-> imgtierra}>
+                            </section>
+                            ";
+                        }
+                        else{
+                            echo"
+                            <section class=secciondescripcioncarta style=background-color:{$this->colorbase}>
+                                <ol>
                                 <li class=itemhabilidad>
                                     {$this-> habilidad}
                                 </li>
                                 <li class=itemtextambiente>
                                     {$this-> textambiente}
                                 </li>
-                            </ol>
-                        </section>
-                        ";
+                                </ol>
+                            </section>
+                            ";
+                        }
+                        
                         if( $this->tipo !=="Instantáneo"&&$this->tipo!=="Encantamiento"
                             &&$this->tipo!=="Conjuro"&&$this->tipo!=="Artefacto" ){
                             echo "
@@ -238,5 +249,78 @@ class Carta {
             </section>
         ";
     }
-    
+    /**
+     * Los siguientes métodos son creados exclusivamente 
+     * para testear cada una de los parámetros o propiedades
+     * de cada objeto carta, aunque también puedan ser utiizados 
+     * para otros fines. 
+     * 
+     * @return <Cada uno de ellos devuelve el parámetro que refiere su nombre>
+     */
+    public function idcarta(){
+        return $this->idcarta;
+    }
+    public function nombre(){
+        return $this->nombre;
+    }
+    public function fondo(){
+        return $this->fondo;
+    }
+    public function shiny(){
+        return $this->shiny;
+    }
+    public function mana1(){
+        return $this->mana1;
+    }
+    public function cantmana1(){
+        return $this->cantmana1;
+    }
+    public function mana2(){
+        return $this->mana2;
+    }
+    public function cantmana2(){
+        return $this->cantmana2;
+    }
+    public function cantmanainc(){
+        return $this->cantmanainc;
+    }
+    public function img(){
+        return $this->img;
+    }
+    public function tipo(){
+        return $this->tipo;
+    }
+    public function tipoespecifico(){
+        return $this->tipoespecifico;
+    }
+    public function expansion(){
+        return $this->expansion;
+    }
+    public function habilidad(){
+        return $this->habilidad;
+    }
+    public function imgtierra(){
+        return $this->imgtierra;
+    }
+    public function textambiente(){
+        return $this->textambiente;
+    }
+    public function fuerza(){
+        return $this->fuerza;
+    }
+    public function resistencia(){
+        return $this->resistencia;
+    }
+    public function artista(){
+        return $this->artista;
+    }
+    public function numcoleccion(){
+        return $this->numcoleccion;
+    }
+    public function colorbase(){
+        return $this->colorbase;
+    }
+    public function cantidad(){
+        return $this->cantidad;
+    }
 }
