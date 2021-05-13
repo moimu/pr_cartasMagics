@@ -102,10 +102,11 @@ class Carta {
      * 
      * @return string <Estructura html y datos de carta>
      * 
-     * {$this-> shiny} {$this-> imgtierra}                    
+     * {$this-> shiny}              
      */
     public function imprime(){
         $idneg = $this-> idcarta*-1;
+        
         echo "  
             <div class=bordecarta id=$idneg >
                 <div class=fondocarta style=background-image:url({$this-> fondo})>
@@ -134,8 +135,6 @@ class Carta {
 
                         <section class=seccionimagen>
                             <img class=imgcarta src={$this-> img}>
-                            
-                            
                         </section>
 
                         <section class=secciontiposubtipocarta style=background-color:{$this->colorbase} >
@@ -152,31 +151,21 @@ class Carta {
                             <img class=imgexpansion src={$this-> expansion}>
 
                         </section>
-                        ";
-                        if($this-> imgtierra != ""){
-                            echo"
-                            <section class=secciondescripcioncarta >
-                                <img  src={$this-> imgtierra}>
-                            </section>
-                            ";
-                        }
-                        else{
-                            echo"
-                            <section class=secciondescripcioncarta style=background-color:{$this->colorbase}>
-                                <ol>
+                         
+                        <section class=secciondescripcioncarta style=background-color:{$this->colorbase}>
+                            <ol>
                                 <li class=itemhabilidad>
                                     {$this-> habilidad}
                                 </li>
                                 <li class=itemtextambiente>
                                     {$this-> textambiente}
                                 </li>
-                                </ol>
-                            </section>
-                            ";
-                        }
-                        
+                            </ol>
+                        </section>
+                           
+                        ";
                         if( $this->tipo !=="Instantáneo"&&$this->tipo!=="Encantamiento"
-                            &&$this->tipo!=="Conjuro"&&$this->tipo!=="Artefacto" ){
+                            &&$this->tipo!=="Conjuro"&&$this->tipo!=="Artefacto"&&$this->tipo!=="Tierra" ){
                             echo "
                                 <footer class=piecarta>
                                     <section class=seccionfuerzaresistencia style=background-color:{$this->colorbase} >

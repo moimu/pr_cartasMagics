@@ -24,27 +24,3 @@ Strix parasitario
 
 maketar web inspiracion
 https://scryfall.com/sets/9ed?order=artist&as=checklist
-
-
-SELECT ca.`idcarta`, ca.`nombre`, fo.`descripcion`, shi.`descripcion`
-,ma1.`direccion` ,ca.`cantmana1`,ma2.`direccion` ,ca.`cantmana2`,mainc.`direccion`, ca.`img`
-, tip.`descripcion`, ca.`tipoespecifico`, ex.`direccion`, ca.`habilidad`, imgt.`direccion`
-, ca.`textambiente`, ca.`fuerza`, ca.`resistencia`, ca.`artista`, ca.`numcoleccion` 
-FROM `cartas` ca
-INNER JOIN `fondos` fo
-ON ca.`idfondo`= fo.`idfondo`
-INNER JOIN `fondos` shi
-ON ca.`idshiny`= shi.`idfondo`
-INNER JOIN `manas` ma1
-ON ca.`idmana1`= ma1.`idmana`
-INNER JOIN `manas` ma2
-ON ca.`idmana2`= ma2.`idmana`
-INNER JOIN `manas` mainc
-ON ca.`idmanaincoloro`= mainc.`idmana`
-INNER JOIN `tipos` tip     
-ON ca.`idtipo`= tip.`idtipo`
-INNER JOIN `expansiones` ex
-ON ca.`idexpansion`= ex.`idexpansion`
-INNER JOIN `imgtierras` imgt
-ON ca.`idimgtierra`= imgt.`idimgtierra`
-ORDER BY `idcarta`

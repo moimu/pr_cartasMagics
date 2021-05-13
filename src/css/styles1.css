@@ -118,6 +118,8 @@
 
 /* maquetación carta */
 
+
+
 .bordecarta{
     opacity: 0;
     z-index: -1;
@@ -128,6 +130,10 @@
     margin-right: auto;
     left: 0;
     right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
     text-align: center;
 
     background-color: black;
@@ -209,8 +215,27 @@
     height: 118px;
     margin-left:5px;
     font-size: 0.6rem;
-}   
-
+    text-align: left;
+    
+}  
+.secciondescripcioncarta ol{
+    width: 195px;
+    height: 105px;
+    position: relative; 
+    margin-left: 3px;
+    
+}
+.itemhabilidad{
+    margin-top: 3px;
+    flex-grow: 1;
+} 
+.itemtextambiente{
+    /* margin-top: 3px; */
+     bottom:0; 
+    position: absolute; 
+    flex-grow: 1;
+    font-style: oblique;
+}
 
 .seccionfuerzaresistencia{
     border: 3px ridge #808080;
@@ -245,22 +270,6 @@
     display: inline-block;
     margin:2px;
 } 
-/* 
-.roja{
-    border: 3px ridge #808080;
-}
-.azul{
-    border: 3px ridge #808080;
-}
-.verde{
-    border: 3px ridge #808080;
-}
-.negra{
-    border: 3px ridge #808080;
-}
-.blanca{
-    border: 3px ridge #808080;
-} */
 
 /* clase de thumbnail */
 

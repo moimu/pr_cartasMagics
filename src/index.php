@@ -32,7 +32,7 @@ $util->html_header();
     ?>
     <script src="./js/script.js" language="javascript" type="text/javascript"></script>
 </main>
-  
+
 <?php
 $util->html_footer_index();
 $util->html_body_fin();

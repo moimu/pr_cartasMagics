@@ -239,3 +239,41 @@ VALUES ('Piedra obstructora','3','1','12','1','1','0','4',
 La carne que se arrastra en nuestra tierra se hará más débil y descuidada."
 -Nicalvs, archimago de Esper',
 '0','0','Warren Mahry','32','#d5dfe9','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Huerto exótico','4','1','1','0','1','0','1',
+'img/dibujo/Huertoexótico.png','9','','3',
+'Agrega a tu reserva de maná un maná de cualquier color que pudiera producir
+una tierra que controle un oponente.','1',
+'"Fue una mañana extraña. Cuenado despertamos, encontramos nuestros arboles
+transformados. No sabiamos si regarlos o lustrarlos."
+-Pulan, jardinero de Bant',
+'0','0','Steven Belledin','24','#f3f1e6','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Frontera inestable','4','1','1','0','1','0','1',
+'img/dibujo/Fronterainestable.png','9','','4',
+'Agrega 1 a tu reserva de maná.
+La tierra objetivo que controles es del tipo tierra básica de tu elección
+hasta el final del turno.','1',
+'Los tragos se durmieron en Jund y despertaron en Grisis. No habían visto
+jamás un zombie. Nunca volverían a ver uno.',
+'0','0','Sahn Ayon','34','#f3f1e6','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Ziggurat antiguo','4','1','1','0','1','0','1',
+'img/dibujo/Zigguratantiguo.png','9','','4',
+'Agrega 1 maná de cualquier color a tu reserva de maná. Usa este maná sólo
+para jugar hechizos de criatura.','1',
+'Construido en honor a las criaturas de Alara, el ziggurat desapareció hace mucho. 
+Cuando Progenitus despertó, el templo surgió nuevamente.',
+'0','0','John Avon','32','#f3f1e6','1');
