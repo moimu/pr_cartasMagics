@@ -23,9 +23,9 @@ $artista = $_POST["artista"];
 $numcoleccion = intval($_POST["numcoleccion"]);
 $colorbase = $_POST["colorbase"];
 $cantidad = $_POST["cantidad"];
-// ruta destino server xampp 
-$destino = $_SERVER['DOCUMENT_ROOT']."\codigodaw\pr102\src\img\dibujo\\".$nombreimg; 
-// ruta destino en base de datos
+// ruta relativa destino server lampp 
+$destino = './img/dibujo/'.$nombreimg; 
+// para insertar ruta destino en base de datos
 $img = "img/dibujo/".$nombreimg;
 // mover fichero imagen a ruta en servidor
 move_uploaded_file($archivo, $destino);
@@ -75,3 +75,4 @@ if(isset($_POST['nombre'])){
 }
 
 $db->close();
+// header('location:index.php');
