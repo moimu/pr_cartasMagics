@@ -2,7 +2,7 @@
 
 include('conexionbd.php');
 
-include('Carta.php');
+include('cartas/Carta.php');
 
 
 $sentencia = $db->prepare("SELECT ca.`idcarta`, ca.`nombre`, fo.`direccion`, shi.`direccion`

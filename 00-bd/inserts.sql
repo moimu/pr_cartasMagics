@@ -75,7 +75,7 @@ INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2
 `idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
 `resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
 VALUES ('Camino al exilio','4','1','13','1','1','0','1',
-'img/dibujo/CaminoalExilio.png','6','','4',
+'img/dibujo/Caminoalexilio.png','6','','4',
 'Remueve del juego la criatura objetivo. Su controlador puede buscar en su biblioteca
 una carta de tierra básica, ponerla en juego girada y luego barajar su biblioteca.','1',
 '','0','0','Todd Lockwood','15','#f3f1e6','1');
