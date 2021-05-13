@@ -1,8 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Moi\Cartas;
-use InvalidArgumentException;
+
 /**
  * Clase para instanciar cartas magic
  * 
