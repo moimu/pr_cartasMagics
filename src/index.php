@@ -22,7 +22,7 @@ $util->html_header();
     
     <?php
         
-        include('cartas/objetoscartas.php');
+        include('objetoscartas.php');
 
         foreach($cartas as $clave=>$valor){
             $valor->thumbnail();     
