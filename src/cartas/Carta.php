@@ -106,13 +106,17 @@ class Carta {
      */
     public function imprime(){
         $idneg = $this-> idcarta*-1;
-        
+        if($this-> shiny == "img/fondos/shiny.png" ){
+            $background = "{$this-> shiny}";
+        }
+        else{
+            $background = "{$this-> fondo}";
+        }
         echo "  
             <div class=bordecarta id=$idneg >
-                <div class=fondocarta style=background-image:url({$this-> fondo})>
-                     
+                <div class=fondocarta style=background-image:url($background)>  
                     <article class=articulocarta>
-
+                    
                         <header class=encabezadocarta borderojo style=background-color:{$this->colorbase}>
                             <h1> {$this-> nombre} </h1>
                             <div>";
@@ -206,7 +210,7 @@ class Carta {
                         }
                         echo "    
                     </article>
-                </div>
+                </div>   
             </div>
         ";
     }
