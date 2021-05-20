@@ -1,0 +1,30 @@
+@startuml
+class Carta{
+    **Atributos**
+    ---
+    **Private**
+   
+    - title:string
+    - rutacss:string
+    - class1:string
+    - class2:string
+    - class3:int
+    - class4:string
+    - class5:string
+    - link1:string
+    - link2:string
+  
+    ---
+    **Métodos**
+    ---
+    **Public**
+    + <<create>> __construct(): void
+    + <<create>> html_ini(): string
+    + <<create>> html_fin(): string
+    + <<create>> html_head(): string 
+    + <<create>> html_body_ini(): string
+    + <<create>> html_body_fin(): string
+    + <<create>> html_header(): string
+    + <<create>> html_footer_index(): string
+}
+@enduml

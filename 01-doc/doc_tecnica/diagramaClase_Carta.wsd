@@ -1,0 +1,37 @@
+@startuml
+class Carta{
+    **Atributos**
+    ---
+    **Private**
+    - idcarta:int
+    - nombre:string
+    - fondo:string
+    - shiny:string
+    - mana1:string
+    - cantmana1:int
+    - mana2:string
+    - cantmana2:int
+    - cantmanainc:string
+    - img:string
+    - tipo:string
+    - tipoespecifico:string
+    - expansion:string
+    - habilidad:string
+    - imgtierra:string
+    - textambiente:string
+    - fuerza:int
+    - resistencia:int
+    - artista:string
+    - numcoleccion:int
+    - colorbase:string
+    - cantidad:int
+    ---
+    **Métodos**
+    ---
+    **Public**
+    + <<create>> __construct(): void
+    + <<create>> __toString(): string
+    + <<create>> imprime(): string
+    + <<create>> thumbnail(): string 
+}
+@enduml
