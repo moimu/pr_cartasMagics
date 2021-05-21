@@ -60,6 +60,7 @@ class Carta {
     private int $numcoleccion;
     private string $colorbase;
     private int $cantidad;
+    private string $background;
 
     public function __construct(
         $idcarta, $nombre, $fondo, $shiny, $mana1, $cantmana1, $mana2, $cantmana2, $cantmanainc,
@@ -75,6 +76,14 @@ class Carta {
         $this-> textambiente = $textambiente; $this-> fuerza = $fuerza; $this-> resistencia = $resistencia;
         $this-> artista = $artista; $this-> numcoleccion = $numcoleccion; $this-> colorbase = $colorbase;
         $this-> cantidad = $cantidad;
+        // resuelvo de esta manera para las cartas shiny, ya que no
+        // consigo solapar de forma óptima
+        if($this-> shiny == "img/fondos/shiny.png" ){
+            $this->background = "{$this-> shiny}";
+        }
+        else{
+            $this->background = "{$this-> fondo}";
+        }
     }
     public function __toString(){
         return "id:   {$this-> idcarta}<br> nombre:   {$this-> nombre}<br> fondo:   {$this-> fondo}<br>
@@ -106,15 +115,10 @@ class Carta {
      */
     public function imprime(){
         $idneg = $this-> idcarta*-1;
-        if($this-> shiny == "img/fondos/shiny.png" ){
-            $background = "{$this-> shiny}";
-        }
-        else{
-            $background = "{$this-> fondo}";
-        }
+        
         echo "  
             <div class=bordecarta id=$idneg >
-                <div class=fondocarta style=background-image:url($background)>  
+                <div class=fondocarta style=background-image:url($this->background)>  
                     <article class=articulocarta>
                     
                         <header class=encabezadocarta borderojo style=background-color:{$this->colorbase}>
@@ -147,7 +151,11 @@ class Carta {
                                 <li class=itemtipo>
                                     {$this-> tipo} 
                                 </li>
-                                -
+                            ";
+                            if($this-> tipoespecifico ){
+                                echo "-";
+                            }
+                            echo "    
                                 <li class=itemsubtipo>
                                     {$this-> tipoespecifico}
                                 </li>
@@ -211,7 +219,7 @@ class Carta {
                         echo "    
                     </article>
                 </div>   
-            </div>
+            </div> 
         ";
     }
     /**
@@ -230,7 +238,9 @@ class Carta {
      */
     public function thumbnail(){
         echo "
-            <section class=thumbnail id={$this-> idcarta} name={$this->nombre} tipo={$this->tipo} cantidad={$this-> cantidad}>
+            <section class=thumbnail id={$this-> idcarta} name={$this->nombre}
+                    tipo={$this->tipo} cantidad={$this-> cantidad}
+                    style=background-image:url($this->background)>
 
                 <header class=headerthumbnail> 
                     <h1> {$this->nombre} </h1>
