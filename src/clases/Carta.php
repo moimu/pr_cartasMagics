@@ -1,7 +1,8 @@
 <?php
 declare(strict_types=1);
 
-
+namespace Moi\Clases;
+use InvalidArgumentException;
 /**
  * Clase para instanciar cartas magic
  * 
@@ -59,6 +60,7 @@ class Carta {
     private int $numcoleccion;
     private string $colorbase;
     private int $cantidad;
+    private string $background;
 
     public function __construct(
         $idcarta, $nombre, $fondo, $shiny, $mana1, $cantmana1, $mana2, $cantmana2, $cantmanainc,
@@ -74,6 +76,14 @@ class Carta {
         $this-> textambiente = $textambiente; $this-> fuerza = $fuerza; $this-> resistencia = $resistencia;
         $this-> artista = $artista; $this-> numcoleccion = $numcoleccion; $this-> colorbase = $colorbase;
         $this-> cantidad = $cantidad;
+        // resuelvo de esta manera para las cartas shiny, ya que no
+        // consigo solapar de forma óptima
+        if($this-> shiny == "img/fondos/shiny.png" ){
+            $this->background = "{$this-> shiny}";
+        }
+        else{
+            $this->background = "{$this-> fondo}";
+        }
     }
     public function __toString(){
         return "id:   {$this-> idcarta}<br> nombre:   {$this-> nombre}<br> fondo:   {$this-> fondo}<br>
@@ -107,11 +117,12 @@ class Carta {
         $idneg = $this-> idcarta*-1;
         
         echo "  
+            
             <div class=bordecarta id=$idneg >
-                <div class=fondocarta style=background-image:url({$this-> fondo})>
-                     
+            
+                <div class=fondocarta style=background-image:url($this->background)>  
                     <article class=articulocarta>
-
+                    
                         <header class=encabezadocarta borderojo style=background-color:{$this->colorbase}>
                             <h1> {$this-> nombre} </h1>
                             <div>";
@@ -133,7 +144,7 @@ class Carta {
                         </header>
 
                         <section class=seccionimagen>
-                            <img class=imgcarta src={$this-> img}>
+                            <img class=imgcarta src={$this-> img} alt={$this-> nombre} loading=lazy>
                         </section>
 
                         <section class=secciontiposubtipocarta style=background-color:{$this->colorbase} >
@@ -142,7 +153,11 @@ class Carta {
                                 <li class=itemtipo>
                                     {$this-> tipo} 
                                 </li>
-                                -
+                            ";
+                            if($this-> tipoespecifico ){
+                                echo "-";
+                            }
+                            echo "    
                                 <li class=itemsubtipo>
                                     {$this-> tipoespecifico}
                                 </li>
@@ -205,8 +220,8 @@ class Carta {
                         }
                         echo "    
                     </article>
-                </div>
-            </div>
+                </div>   
+            </div>    
         ";
     }
     /**
@@ -225,13 +240,15 @@ class Carta {
      */
     public function thumbnail(){
         echo "
-            <section class=thumbnail id={$this-> idcarta} name={$this->nombre} tipo={$this->tipo} cantidad={$this-> cantidad}>
+            <section class=thumbnail id={$this-> idcarta} name={$this->nombre}
+                    tipo={$this->tipo} cantidad={$this-> cantidad}
+                    style=background-image:url($this->background)>
 
                 <header class=headerthumbnail> 
                     <h1> {$this->nombre} </h1>
                  </header>
                 <main> 
-                    <img class=imgthumbnail src={$this->img} alt={$this->nombre}> 
+                    <img class=imgthumbnail src={$this->img} alt={$this->nombre} loading=lazy> 
                 </main>
 
             </section>

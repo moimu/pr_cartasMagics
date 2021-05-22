@@ -1,5 +1,5 @@
 <?php
-include('cartas/Utiles.php');
+include('clases/Utiles.php');
 $util = new Utiles('Colección cartas magic','css/styles1.css','body',
 'indexheader','logoymenu','menu','indexfooter','index.php','crearcarta.php');
 $util->html_ini();
@@ -23,7 +23,7 @@ $util->html_header();
     <?php
         
         include('objetoscartas.php');
-
+         
         foreach($cartas as $clave=>$valor){
             $valor->thumbnail();     
             $valor->imprime(); 

@@ -17,6 +17,21 @@ function ocultarTodo(){
     });
 }
 /**
+ * ocultarThumnails() y mostrarThumnails()
+ * recorren todas las estructuras con clase .thumnail 
+ * y las oculta o las muestra.
+ */
+function ocultarThumnails(){
+    thumbnail.forEach( function( thumb ){
+        thumb.style.opacity = 0;
+    });
+}
+function mostrarThumnails(){
+    thumbnail.forEach( function( thumb ){
+        thumb.style.opacity = 1;
+    });
+}
+/**
  * Esta funcion oculta todas las cartas, y muestra solo
  * la carta asociada al evento click del thumbnail
  * 
@@ -24,7 +39,8 @@ function ocultarTodo(){
  * .thumbnail, a cada una se asocia un evento click que:
  * llama a ocultarTodo() y recorre todas las cartas, y para 
  * aquella que su id es igual a thumnail clicado *-1 
- * la hace visible mostrandose encima de los thumnails.
+ * la hace visible mostrandose encima de los thumnails,
+ * los thumnail son ocultados con ocultarThumnails()
  * 
  * @param thumbnail <contiene todas las estructuras HTML 
  * con la clase .thumbnail del DOM>
@@ -38,6 +54,7 @@ thumbnail.forEach(function( thumb ){
                 carta.style.zIndex = 1; 
             }
         });
+        ocultarThumnails();
     });
 });
 /**
@@ -45,12 +62,14 @@ thumbnail.forEach(function( thumb ){
  * 
  * Recorre todas las cartas del DOM y les aplica el 
  * evento click que al ejecutarlo llama a ocultarTodo()
- * ocultando todas la cartas y dejando solo los thumbnails
- * visibles.
+ * ocultando todas la cartas y a ocultarThumnails()
+ * dejando los thumbnails visibles.
+ * 
  */
 cartas.forEach( function(carta){
     carta.addEventListener( 'click' , function ( carta ){
         ocultarTodo();
+        mostrarThumnails();
     } );
 });
 /**
