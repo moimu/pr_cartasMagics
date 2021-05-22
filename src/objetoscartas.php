@@ -1,8 +1,8 @@
 <?php
 
-include('conexionbd.php');
+require_once('conexionbd.php');
 
-include('../vendor/autoload.php');
+require_once('../vendor/autoload.php');
 use Moi\Clases\Carta;
 
 $sentencia = $db->prepare("SELECT ca.`idcarta`, ca.`nombre`, fo.`direccion`, shi.`direccion`
