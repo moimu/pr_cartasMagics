@@ -3,7 +3,7 @@
 include('conexionbd.php');
 
 include('../vendor/autoload.php');
-use Moi\Cartas\Carta;
+use Moi\Clases\Carta;
 
 $sentencia = $db->prepare("SELECT ca.`idcarta`, ca.`nombre`, fo.`direccion`, shi.`direccion`
 ,ma1.`direccion` ,ca.`cantmana1`,ma2.`direccion` ,ca.`cantmana2`,mainc.`direccion`, ca.`img`

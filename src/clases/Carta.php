@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Moi\Cartas;
+namespace Moi\Clases;
 use InvalidArgumentException;
 /**
  * Clase para instanciar cartas magic
@@ -117,7 +117,9 @@ class Carta {
         $idneg = $this-> idcarta*-1;
         
         echo "  
+            
             <div class=bordecarta id=$idneg >
+            
                 <div class=fondocarta style=background-image:url($this->background)>  
                     <article class=articulocarta>
                     
@@ -219,7 +221,7 @@ class Carta {
                         echo "    
                     </article>
                 </div>   
-            </div> 
+            </div>    
         ";
     }
     /**

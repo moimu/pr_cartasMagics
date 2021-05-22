@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Moi\Test\Cartas;
 
-use Moi\Cartas\Carta;
+use Moi\Clases\Carta;
 use PHPUnit\Framework\TestCase;
 use InvalidArgumentException;
 
