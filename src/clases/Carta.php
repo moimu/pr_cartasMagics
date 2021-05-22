@@ -33,8 +33,6 @@ use InvalidArgumentException;
  * @param string colorbase < color bordes y ambiente >
  * @param int cantidad < cantidad de cartas >
  * 
- * @author Moises correodemomuar@gmail.com
- * @version 1.1 objeto carta
  */
 
 class Carta {

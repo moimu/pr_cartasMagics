@@ -74,13 +74,8 @@ INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2
 `cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
 `idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
 `resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
-<<<<<<< HEAD:00-bd/inserts.sql
-VALUES ('Camino al exilio','4','1','13','1','1','0','1',
-'img/dibujo/Caminoalexilio.png','6','','4',
-=======
 VALUES ('Camino al exilio','4','2','13','1','1','0','1',
-'img/dibujo/CaminoalExilio.png','6','','4',
->>>>>>> fase1:src/00-bd/inserts.sql
+'img/dibujo/Caminoalexilio.png','6','','4',
 'Remueve del juego la criatura objetivo. Su controlador puede buscar en su biblioteca
 una carta de tierra básica, ponerla en juego girada y luego barajar su biblioteca.','1',
 '','0','0','Todd Lockwood','15','#f3f1e6','1');
