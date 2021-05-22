@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 namespace Moi\Test\Cartas;
-
+include_once('../src/clases/Carta.php');
 use Moi\Clases\Carta;
 use PHPUnit\Framework\TestCase;
 use InvalidArgumentException;
