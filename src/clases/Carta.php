@@ -144,7 +144,7 @@ class Carta {
                         </header>
 
                         <section class=seccionimagen>
-                            <img class=imgcarta src={$this-> img}>
+                            <img class=imgcarta src={$this-> img} alt={$this-> nombre} loading=lazy>
                         </section>
 
                         <section class=secciontiposubtipocarta style=background-color:{$this->colorbase} >
@@ -248,7 +248,7 @@ class Carta {
                     <h1> {$this->nombre} </h1>
                  </header>
                 <main> 
-                    <img class=imgthumbnail src={$this->img} alt={$this->nombre}> 
+                    <img class=imgthumbnail src={$this->img} alt={$this->nombre} loading=lazy> 
                 </main>
 
             </section>
