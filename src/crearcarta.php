@@ -53,7 +53,7 @@ $util->html_header();
                 <div><label>verde<input type="radio" name="idmana1" value="16" required><label></div> 
                 <div><label>negro<input type="radio" name="idmana1" value="14" required><label></div> 
                 <div><label>blanco<input type="radio" name="idmana1" value="13" required><label></div> 
-                <div><label>Cantidad:<input type="number" name="cantmana1" min="0" max="5" placeholder="0" required><label></div>
+                <div><label>Cantidad:<input type="number" name="cantmana1" min="0" max="5"  required><label></div>
             </fieldset>   
             <fieldset class="typeradio">
                 <legend>Mana 2</legend>
@@ -64,11 +64,11 @@ $util->html_header();
                 <div><label>verde<input type="radio" name="idmana2" value="16" required><label></div> 
                 <div><label>negro<input type="radio" name="idmana2" value="14" required><label></div> 
                 <div><label>blanco<input type="radio" name="idmana2" value="13" required><label></div> 
-                <div><label>Cantidad:<input type="number" name="cantmana2" min="0" max="5" placeholder="0" required><label></div>
+                <div><label>Cantidad:<input type="number" name="cantmana2" min="0" max="5" required><label></div>
             </fieldset>
             <fieldset>    
                 <p>Mana incoloro</p>  
-                <div><label> Cantidad: <input type="number" name="idmanaincoloro" min="0" max="10" placeholder="0" required><label></div>  
+                <div><label> Cantidad: <input type="number" name="idmanaincoloro" min="0" max="10" required><label></div>  
             </fieldset>
             <fieldset>
                 <legend>Imagen</legend> 
@@ -114,6 +114,10 @@ $util->html_header();
                     <label>Conflux dorado<input type="radio" name="idexpansion" value="3" required><label>
                     <label>Conflux gris<input type="radio" name="idexpansion" value="4" required><label>
                     <label>Conflux rojo<input type="radio" name="idexpansion" value="5" required><label>
+
+                    <label>Ravnica negro<input type="radio" name="idexpansion" value="6" required><label>
+                    <label>Ravnica dorado<input type="radio" name="idexpansion" value="7" required><label>
+                    <label>Ravnica gris<input type="radio" name="idexpansion" value="8" required><label>
                 </div>
             </fieldset>
             <fieldset class="descripcionesform notrequired" >
@@ -124,20 +128,20 @@ $util->html_header();
             <fieldset class="notrequired">
                 <legend> fuerza y resistencia </legend> 
                 <div>
-                    <label> fuerza <input type="number" name="fuerza" min="0" max="20" placeholder="0" required><label>
-                    <label> resistencia <input type="number" name="resistencia" min="0" max="20" placeholder="0" required><label>
+                    <label> fuerza <input type="number" name="fuerza" min="0" max="20"  required><label>
+                    <label> resistencia <input type="number" name="resistencia" min="0" max="20"  required><label>
                 </div>
             </fieldset>
             <fieldset>
                 <legend> Artista y colección </legend> 
                 <div><label> Nombre artista <input type="text" name="artista"  maxlength="50" required><label></div>
                 <br/>
-                <div><label> Nº colección <input type="number" name="numcoleccion" min="1" max="500" placeholder="1" required><label></div>
+                <div><label> Nº colección <input type="number" name="numcoleccion" min="1" max="500" required><label></div>
             </fieldset>
             <fieldset>
                 <legend> Cantidad de cartas a crear</legend> 
                 <div>
-                    <label> Cantidad <input type="number" name="cantidad" min="1" max="500" placeholder="1" required><label>
+                    <label> Cantidad <input type="number" name="cantidad" min="1" max="500" required><label>
                 </div>
             </fieldset>
             <div ><button class="buttonform" type="submit"> Crear carta </button></div>

@@ -115,7 +115,7 @@ class Carta {
         echo "  
             
             <div class=bordecarta id=$idneg >
-            
+            <div class=cierrecarta> <p class=cierrecarta_p> X </p> </div>
                 <div class=fondocarta style=background-image:url($this->background)>  
                     <article class=articulocarta>
                     
@@ -161,8 +161,12 @@ class Carta {
                             <img class=imgexpansion src={$this-> expansion}>
 
                         </section>
-                         
-                        <section class=secciondescripcioncarta style=background-color:{$this->colorbase}>
+
+                        <section class=secciondescripcioncarta style=background-color:{$this->colorbase}>";
+                        if($this-> imgtierra){
+                            echo" <img class=imgtierra src={$this-> imgtierra} alt={$this-> nombre} loading=lazy> ";
+                        }
+                        echo"
                             <ol>
                                 <li class=itemhabilidad>
                                     {$this-> habilidad}

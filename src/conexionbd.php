@@ -4,8 +4,8 @@
  */
 
 $servidor = "localhost"; 
-$user = "daw_dba"; 
-$password = "daw"; 
+$user = "root"; 
+$password = null; 
 $database = "magics"; 
 $db = new mysqli($servidor,$user, $password,$database); 
 if($db->connect_error){ 
