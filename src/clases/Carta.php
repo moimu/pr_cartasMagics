@@ -12,26 +12,26 @@ use InvalidArgumentException;
  * 
  * @param int idcarta <id de la carta>
  * @param string nombre <nombre de carta>
- * @param string fondo < url del fondo>
- * @param string shiny < url cover shiny>
- * @param string mana1 < url primer mana>
+ * @param string fondo <url del fondo>
+ * @param string shiny <url cover shiny>
+ * @param string mana1 <url primer mana>
  * @param int cantmana1 <cantidad numero primer mana>
- * @param string mana2 < url segundo mana>
+ * @param string mana2 <url segundo mana>
  * @param int cantmana2 <cantidad numero segundo mana>
  * @param string cantmanainc <url mana incoloro>
- * @param string img < url imagen carta>
- * @param string tipo < descripcion del tipo>
- * @param string tipoespecifico < descripcion tipo especifico>
- * @param string expansion < url expansión>
+ * @param string img <url imagen carta>
+ * @param string tipo <descripcion del tipo>
+ * @param string tipoespecifico <descripcion tipo especifico>
+ * @param string expansion <url expansión>
  * @param string habilidad <descripción de habilidades>
- * @param string imgtierra < imagen tierra>
+ * @param string imgtierra <imagen tierra>
  * @param string textambiente <descripción texto ambiente>
  * @param int fuerza <nivel de fuerza>
- * @param int resistencia < nivel de resistencia>
+ * @param int resistencia <nivel de resistencia>
  * @param string artista <nombre creador ilustración carta>
- * @param int numcoleccion < numero correspondiente a expansion>
- * @param string colorbase < color bordes y ambiente >
- * @param int cantidad < cantidad de cartas >
+ * @param int numcoleccion <numero correspondiente a expansion>
+ * @param string colorbase <color bordes y ambiente>
+ * @param int cantidad <cantidad de cartas>
  * 
  */
 
@@ -107,9 +107,7 @@ class Carta {
      * Si el tipo de carta no es instantáneo o encantamiento
      * se imprirá la estructura para fuerza y resistencia.
      * 
-     * @return string <Estructura html y datos de carta>
-     * 
-     * {$this-> shiny}              
+     * @return string <Estructura html y datos de carta>           
      */
     public function imprime(){
         $idneg = $this-> idcarta*-1;
