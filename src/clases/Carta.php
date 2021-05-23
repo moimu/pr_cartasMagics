@@ -115,7 +115,7 @@ class Carta {
         echo "  
             
             <div class=bordecarta id=$idneg >
-            
+            <div class=cierrecarta> <p class=cierrecarta_p> X </p> </div>
                 <div class=fondocarta style=background-image:url($this->background)>  
                     <article class=articulocarta>
                     
