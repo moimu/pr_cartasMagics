@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace Moi\Clases;
 use InvalidArgumentException;
+include('interfaces/Printeable.php');
+// use Moi\Clases\Interfaces\Printeable;
+
 /**
  * Clase para instanciar cartas magic
  * 
@@ -35,7 +38,8 @@ use InvalidArgumentException;
  * 
  */
 
-class Carta {
+ class Carta implements PrinteableInterface{
+
     private int $idcarta;
     private string $nombre;
     private string $fondo;
@@ -109,7 +113,7 @@ class Carta {
      * 
      * @return string <Estructura html y datos de carta>           
      */
-    public function imprime(){
+    public function imprimeCarta(){
         $idneg = $this-> idcarta*-1;
         
         echo "  
@@ -234,7 +238,7 @@ class Carta {
      * 
      * @return string <Estructura html del thumnail y datos carta>
      */
-    public function thumbnail(){
+    public function imprimethumbnail(){
         echo "
             <section class=thumbnail id={$this-> idcarta} name={$this->nombre}
                     tipo={$this->tipo} cantidad={$this-> cantidad}

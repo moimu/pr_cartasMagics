@@ -25,8 +25,8 @@ $util->html_header();
         include('objetoscartas.php');
          
         foreach($cartas as $clave=>$valor){
-            $valor->thumbnail();     
-            $valor->imprime(); 
+            $valor->imprimethumbnail();     
+            $valor->imprimeCarta(); 
         }
     
     ?>
