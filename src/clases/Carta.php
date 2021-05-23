@@ -161,8 +161,12 @@ class Carta {
                             <img class=imgexpansion src={$this-> expansion}>
 
                         </section>
-                         
-                        <section class=secciondescripcioncarta style=background-color:{$this->colorbase}>
+
+                        <section class=secciondescripcioncarta style=background-color:{$this->colorbase}>";
+                        if($this-> imgtierra){
+                            echo" <img class=imgtierra src={$this-> imgtierra} alt={$this-> nombre} loading=lazy> ";
+                        }
+                        echo"
                             <ol>
                                 <li class=itemhabilidad>
                                     {$this-> habilidad}

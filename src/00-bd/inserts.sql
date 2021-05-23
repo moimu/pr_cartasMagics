@@ -55,7 +55,10 @@ VALUES ('Sin expansión',''),
 ('conflux negro','img/expansiones/confluxNegro.png'), 
 ('conflux dorado','img/expansiones/confluxDorado.png'), 
 ('conflux gris','img/expansiones/confluxGris.png'), 
-('conflux rojo','img/expansiones/confluxRojo.png'); 
+('conflux rojo','img/expansiones/confluxRojo.png'),
+('ravnica negro','img/expansiones/ravnicaNegro.png'), 
+('ravnica dorado','img/expansiones/ravnicaDorado.png'), 
+('ravnica gris','img/expansiones/ravnicaGris.png');
 
 -- 10 cartas
 INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
@@ -276,4 +279,60 @@ VALUES ('Ziggurat antiguo','4','1','1','0','1','0','1',
 para jugar hechizos de criatura.','1',
 'Construido en honor a las criaturas de Alara, el ziggurat desapareció hace mucho. 
 Cuando Progenitus despertó, el templo surgió nuevamente.',
-'0','0','John Avon','32','#f3f1e6','1');
+'0','0','John Avon','110','#f3f1e6','2');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Bosque','7','1','1','0','1','0','1',
+'img/dibujo/bosqueravnica1.png','9','Bosque','6',
+'','5','',
+'0','0','Richard Wright','194','#d6e7d4','2');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Isla','3','1','1','0','1','0','1',
+'img/dibujo/islaravnica1.png','9','Isla','6',
+'','6','',
+'0','0','Sahn Ayon','34','#d5dfe9','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Montaña','6','1','1','0','1','0','1',
+'img/dibujo/mountainravnica1.png','9','Montaña','6',
+'','4','',
+'0','0','Sahn Ayon','322','#f4e1d2','2');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('LLanura','4','1','1','0','1','0','1',
+'img/dibujo/llanuraravnica1.png','9','LLanura','6',
+'','2','',
+'0','0','Sahn Ayon','152','#f3f1e6','1');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Pantano','5','1','1','0','1','0','1',
+'img/dibujo/pantanoravnica1.png','9','Pantano','6',
+'','3','',
+'0','0','Sahn Ayon','326','#eae7e0','2');
+
+INSERT INTO `cartas`(`nombre`,`idfondo`,`idshiny`,`idmana1`,`cantmana1`,`idmana2`,
+`cantmana2`,`idmanaincoloro`,`img`,`idtipo`,`tipoespecifico`,
+`idexpansion`,`habilidad`,`idimgtierra`,`textambiente`,`fuerza`,
+`resistencia`,`artista`,`numcoleccion`,`colorbase`,`cantidad`) 
+VALUES ('Esfuerzo coordinado','4','1','13','2','1','0','2',
+'img/dibujo/EsfuerzoCoordinado.png','7','','7',
+'Al comienzo del mantenimiento de cada jugador, todas las criaturas ganan la habilidad de volar 
+hasta el final del turno si una criatura que controlas vuela. Lo mismo vale para habilidades 
+inspirar temor, dañar primero, dañar dos veces, cruzar tierras, protección, arrollar y vigilancia',
+'1','','0','0','Michael Suffin','8','#f3f1e6','1');
